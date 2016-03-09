@@ -27,15 +27,14 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Student Management System : Missionary Training College</a>
+                        <a class="navbar-brand" href="/">Student Management System : Missionary Training College</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li class="active"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                           
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Advanced Search <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
@@ -46,6 +45,7 @@
                                     <li><a href="#">One more separated link</a></li>
                                 </ul>
                             </li>
+                            <li><a href="/login_form"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
                       </ul>
                     </div>
                 </div>
