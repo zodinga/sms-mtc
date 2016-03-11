@@ -21,13 +21,18 @@ class Create_Students_Table {
                    $table->string('pob',50)->nullable();
                    $table->string('gender',10)->nullable();
                    $table->string('nationality',50)->nullable();
+                   $table->string('contact_no',50)->nullable();
                    $table->string('local_church_address',100)->nullable();
                    $table->string('street',50)->nullable();
                    $table->string('town',50)->nullable();
                    $table->string('district',50)->nullable();
                    $table->string('state',50)->nullable();
                    $table->string('pin',10)->nullable();
-                   $table->string('contact_no',50)->nullable();
+                   $table->string('pstreet',50)->nullable();
+                   $table->string('ptown',50)->nullable();
+                   $table->string('pdistrict',50)->nullable();
+                   $table->string('pstate',50)->nullable();
+                   $table->string('ppin',10)->nullable();
                    $table->string('guardian_name',100)->nullable();
                    $table->string('guardian_address',100)->nullable();
                    $table->integer('yoa')->unsigned()->nullable();
@@ -44,6 +49,12 @@ class Create_Students_Table {
                    $table->string('degree_year',20)->nullable();
                    $table->string('degree_degree',50)->nullable();
                    $table->string('degree_division',20)->nullable();
+                   //short course
+                   $table->integer('job_id')->nullable();
+                   $table->string('jobs_place',50)->nullable();
+                   $table->string('jobs_field',50)->nullable();
+                   $table->string('yoj',50)->nullable();
+                   //end short course
                    $table->string('remarks')->nullable();
                    $table->timestamps();
                 });
