@@ -26,11 +26,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/dashboard">Student Management System : Missionary Training College</a>
+                    <a class="navbar-brand" href="#">Student Management System : Missionary Training College</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Welcome : {{Auth::user()->username}}</a></li>
+                        <li><a href="#">Welcome : ######</a></li>
                         <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
                     </ul>
                 </div>
