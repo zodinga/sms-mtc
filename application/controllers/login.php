@@ -17,12 +17,12 @@ class Login_Controller extends Base_Controller {
 				}
 			else
 				{
-				return Redirect::to('home')->with('conf',1);
+				return Redirect::to('login_form')->with('conf',1);
 				}
 			}
 			else
 			{
-			return Redirect::to('home')->with('conf',2);
+			return Redirect::to('login_form')->with('conf',2);
 			}
 	}
 

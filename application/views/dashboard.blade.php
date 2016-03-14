@@ -10,10 +10,10 @@
         <link rel="icon" href="../../favicon.ico">
 
         <title>Dashboard : Student Management System (MTC)</title>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-        <link href="bootstrap/css/dashboard.css" rel="stylesheet">
-        <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="../../bootstrap/css/dashboard.css" rel="stylesheet">
+        <script src="../../bootstrap/js/ie-emulation-modes-warning.js"></script>
     </head>
 
     <body>
@@ -30,7 +30,7 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Welcome : ######</a></li>
+                        <li><a href="#">Welcome : {{Auth::user()->username}}</a></li>
                         <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
                     </ul>
                 </div>
@@ -53,8 +53,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">New User</a></li>
-                                <li><a href="#">Edit user</a></li>
+                                <li><a href="/account/accountCreate"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create/Edit User</a></li>
+                                <li><a href="/account/accountChange"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Change Password</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -97,12 +97,12 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="bootstrap/js/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="bootstrap/js/jquery.min.js"><\/script>')</script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../bootstrap/js/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../bootstrap/js/jquery.min.js"><\/script>')</script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
         <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-        <script src="bootstrap/js/holder.min.js"></script>
+        <script src="../../bootstrap/js/holder.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="../../bootstrap/js/ie10-viewport-bug-workaround.js"></script>
     </body>
 </html>
