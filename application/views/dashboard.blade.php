@@ -51,10 +51,18 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Account <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/account/accountCreate"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create/Edit User</a></li>
                                 <li><a href="/account/accountChange"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Change Password</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> System Config <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/course/courseCreate"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Course</a></li>
+                                <li><a href="/designation/designationCreate"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Designation</a></li>
+                                <li><a href="/subject/subjectCreate"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Subject/Paper</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

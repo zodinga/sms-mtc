@@ -1,6 +1,6 @@
 <?php
 
-class Create_Jobs_Table {
+class Create_designations_Table {
 
 	/**
 	 * Make changes to the database.
@@ -10,10 +10,10 @@ class Create_Jobs_Table {
 	public function up()
 	{
 		//
-		Schema::create('Jobs',function($table)
+		Schema::create('Designations',function($table)
                 {
                    $table->increments('id');
-                   $table->string('job',50);
+                   $table->string('designation',50);
                    $table->timestamps();
                 });
 	}
@@ -26,7 +26,7 @@ class Create_Jobs_Table {
 	public function down()
 	{
 		//
-		Schema::drop('Jobs');
+		Schema::drop('Designations');
 	}
 
 }

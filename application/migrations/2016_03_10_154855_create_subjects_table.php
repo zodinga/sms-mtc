@@ -15,6 +15,7 @@ class Create_Subjects_Table {
                    $table->increments('id');
                    $table->integer('course_id')->unsigned();
                    $table->date('syllabus_start_date');
+                   $table->string('code')->nullable();
                    $table->string('subject',50);
                    $table->integer('fullmark')->unsigned();
                    $table->integer('passmark')->unsigned();
