@@ -29,6 +29,13 @@
 			</div>
 
 			<div class="form-group">
+			    <label for="shortname" class="col-sm-2 control-label">Short Name</label>
+			    <div class="col-sm-10">
+			      	<input type="text" class="form-control" id="shortname" name="shortname" placeholder="Enter Course Short name" required title="Course short name Required">
+			    </div>
+			</div>
+
+			<div class="form-group">
 			    <label for="duration" class="col-sm-2 control-label">Duration</label>
 			    <div class="col-sm-10">
 			      	<input type="text" class="form-control" name="duration" id="duration" placeholder="Enter Course Duration" required title="Duration Required">

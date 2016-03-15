@@ -57,6 +57,7 @@
                                 <li><a href="/account/accountChange"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Change Password</a></li>
                             </ul>
                         </li>
+
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> System Config <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -65,11 +66,51 @@
                                 <li><a href="/subject/subjectCreate"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Subject/Paper</a></li>
                             </ul>
                         </li>
+
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student/Staff <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Student Entry <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">New Entry Student/Staff</a></li>
-                                <li><a href="#">Edit Student/Staff</a></li>
+                                @foreach($courses as $course)
+                                <li><a href="/student/studentCreate/{{$course->id}}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Student ({{$course->course}})</a></li>
+                                <li><a href="/student/studentExisting/{{$course->id}}"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Student ({{$course->course}})</a></li>
+                                <li role="separator" class="divider"></li>
+                                @endforeach
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Result Entry <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                @foreach($courses as $course)
+                                <li><a href="/student/studentCreate/{{$course->id}}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> {{$course->course}}</a></li>
+                                <li role="separator" class="divider"></li>
+                                @endforeach
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Staff Entry <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/student/staffCreate"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Staff</a></li>
+                                <li><a href="/student/staffExisting"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Staff</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-export" aria-hidden="true"></span> Report <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Student</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Staff</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Result</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Separated link</a></li>
                                 <li role="separator" class="divider"></li>

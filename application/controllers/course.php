@@ -45,6 +45,7 @@ class Course_Controller extends Base_Controller {
 		$course = new Courses;
 		
 		$course->course = Input::get('coursename');
+		$course->short_name = Input::get('shortname');
 		$course->duration = Input::get('duration');
 		$course->no_of_subjs = Input::get('noSubject');
 		$course->remarks = Input::get('remarks');
@@ -79,6 +80,7 @@ class Course_Controller extends Base_Controller {
 		$id = Input::get('id');
 		$course = Courses::find($id);
 		$course->course = Input::get('coursename');
+		$course->short_name = Input::get('shortname');
 		$course->duration = Input::get('duration');
 		$course->no_of_subjs = Input::get('noSubject');
 		$course->remarks = Input::get('remarks');
