@@ -32,11 +32,12 @@ class Student_Controller extends Base_Controller {
 			$conf = 0;
 		}
 		
-				
+
 		$courses = Courses::all();
-		
+		$scps = StudentCoursePivots::all();
 		return View::make('student.create')
 			->with('courses',$courses)
+			->with('scps',$scps)
 			->with('conf',$conf);
 
 	}

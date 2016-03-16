@@ -4,18 +4,7 @@
 	@if($conf == 1)
 		<div class="alert alert-success" role="alert">Student Entry Field Selector successfully updated...</div>
 	@endif
-	@if($conf == 2)
-		<div class="alert alert-danger" role="alert">Delete Error: Course Cannot Delete...</div>
-	@endif
-	@if($conf == 3)
-		<div class="alert alert-warning" role="alert">Save Error: Course Cannot Save...</div>
-	@endif
-	@if($conf == 4)
-		<div class="alert alert-success" role="alert">One Course successfully created...</div>
-	@endif
-	@if($conf == 5)
-		<div class="alert alert-success" role="alert">One Course successfully Updated...</div>
-	@endif
+	
     <div class="col-md-12">
 
         <h3>Student Entry Column Selector</h3>
