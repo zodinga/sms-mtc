@@ -54,7 +54,6 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Account <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/account/accountCreate"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create/Edit User</a></li>
-                                <li><a href="/account/accountChange"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Change Password</a></li>
                             </ul>
                         </li>
 
