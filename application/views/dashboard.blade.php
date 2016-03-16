@@ -64,6 +64,7 @@
                                 <li><a href="/course/courseCreate"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Course</a></li>
                                 <li><a href="/designation/designationCreate"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Designation</a></li>
                                 <li><a href="/subject/subjectCreate"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Subject/Paper</a></li>
+                                <li><a href="/student_course_pivot"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Entry Column Selector</a></li>
                             </ul>
                         </li>
 
