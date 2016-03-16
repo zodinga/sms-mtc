@@ -25,7 +25,26 @@
 			    </div>
 			</div>
 
-			
+			<div class="form-group">
+			    <label for="password" class="col-sm-2 control-label">Old Password</label>
+			    <div class="col-sm-10">
+			      	<input type="password" class="form-control" name="old_password" id="password" placeholder="Enter Old Password" required title="Password Required">
+			    </div>
+			</div>
+
+			<div class="form-group">
+			    <label for="password" class="col-sm-2 control-label">New Password</label>
+			    <div class="col-sm-10">
+			      	<input type="password" class="form-control" name="password" id="password" placeholder="Enter New Password" required title="Password Required">
+			    </div>
+			</div>
+
+			<div class="form-group">
+			    <label for="repassword" class="col-sm-2 control-label">Retype New Password</label>
+			    <div class="col-sm-10">
+			      	<input type="password" class="form-control" id="repassword" name="repassword" placeholder="Retype New Password" required title="Please Retype Password">
+			    </div>
+			</div>
 			  
 			<div class="form-group">
 			    <div class="col-sm-offset-2 col-sm-10">

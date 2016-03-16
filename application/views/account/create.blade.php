@@ -16,6 +16,9 @@
 	@if($conf == 5)
 		<div class="alert alert-success" role="alert">One Account successfully Updated...</div>
 	@endif
+	@if($conf == 6)
+		<div class="alert alert-danger" role="alert">Update Error: Account cannot update due to password mismatch...</div>
+	@endif
     <div class="col-md-6">
 
         <h3>New Account</h3>

@@ -14,8 +14,10 @@ class Account_Controller extends Base_Controller {
 			$conf = 0;
 		}
 		$users = Users::all();
+		$courses = Courses::all();
 		return View::make('account.create')
 			->with('users',$users)
+			->with('courses',$courses)
 			->with('conf',$conf);
 	}
 
@@ -44,18 +46,21 @@ class Account_Controller extends Base_Controller {
 	{
 		if(Auth::guest())return Redirect::to('home')->with('conf',3);
 		$user = new Users;
+		$courses = Courses::all();
 		if(Input::get('password') == Input::get('repassword'))
 		{
 			$user->username = Input::get('username');
 			$user->password = Hash::make(Input::get('password'));
 			$user->save();
 			return Redirect::to('account')
+				->with('courses',$courses)
 				->with('conf',4);
 
 		}
 		else
 		{
 			return Redirect::to('account')
+				->with('courses',$courses)
 				->with('conf',3);
 		}
 	}
@@ -73,9 +78,11 @@ class Account_Controller extends Base_Controller {
 		}
 		$user = Users::find($id);
 		$users = Users::all();
+		$courses = Courses::all();
 		return View::make('account.edit')
 			->with('conf',$conf)
 			->with('user',$user)
+			->with('courses',$courses)
 			->with('users',$users);
 
 	}
@@ -84,9 +91,24 @@ class Account_Controller extends Base_Controller {
 		$id = Input::get('id');
 		$user = Users::find($id);
 		$user->username = Input::get('username');
-		$user->save();
-		return Redirect::to('account')
+		if (Hash::check(Input::get('old_password'), $user->password))
+		{
+    		if(Input::get('password')==Input::get('repassword'))
+    		{
+    			$user->password=Hash::make(Input::get('password'));
+    		}
+    		$user->save();
+			return Redirect::to('account')
 			->with('conf',5);
+		}
+		else
+		{
+			return Redirect::to('account')
+			->with('conf',6);
+		}
+			
+
+		
 	}
 	public function action_accountDelete($id)
 	{
@@ -106,5 +128,7 @@ class Account_Controller extends Base_Controller {
 		}
 		
 	}
+
+	
 
 }
