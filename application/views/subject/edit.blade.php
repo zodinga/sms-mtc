@@ -43,7 +43,14 @@
 			<div class="form-group">
 			    <label for="syllabus_start_date" class="col-sm-2 control-label">Syllabus Start Date</label>
 			    <div class="col-sm-10">
-			      	<input type="date" class="form-control" name="syllabus_start_date" id="syllabus_start_date" value="{{$subject->syllabus_start_date}}">
+			    <?php 
+			    	$time = strtotime($subject->syllabus_start_date);
+
+					$newformat = date('Y-m-d',$time);
+
+			    	?>
+			      	<input type="date" class="form-control" name="syllabus_start_date" id="syllabus_start_date" value="{{$newformat}}">
+			    	
 			    </div>
 			</div>
 

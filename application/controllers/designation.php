@@ -14,8 +14,10 @@ class Designation_Controller extends Base_Controller {
 			$conf = 0;
 		}
 		$designations = Designations::all();
+		$courses = Courses::all();
 		return View::make('designation.create')
 			->with('designations',$designations)
+			->with('courses',$courses)
 			->with('conf',$conf);
 	}
 
@@ -33,10 +35,11 @@ class Designation_Controller extends Base_Controller {
 		}
 		$designations = designations::all();
 
-		
+		$courses = Courses::all();
 		return View::make('designation.create')
 			->with('designations',$designations)
-			->with('conf',$conf);
+			->with('conf',$conf)
+			->with('courses',$courses);
 
 	}
 	public function action_designationSave()
@@ -65,9 +68,11 @@ class Designation_Controller extends Base_Controller {
 		}
 		$designation = Designations::find($id);
 		$designations = Designations::all();
+		$courses = Courses::all();
 		return View::make('designation.edit')
 			->with('conf',$conf)
 			->with('designation',$designation)
+			->with('courses',$courses)
 			->with('designations',$designations);
 
 	}
