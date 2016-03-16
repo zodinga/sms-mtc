@@ -11,54 +11,394 @@
 		<div class="alert alert-warning" role="alert">Save Error: Course Cannot Save...</div>
 	@endif
 	@if($conf == 4)
-		<div class="alert alert-success" role="alert">One Course successfully created...</div>
+		<div class="alert alert-success" role="alert">One Student successfully added...</div>
 	@endif
 	@if($conf == 5)
 		<div class="alert alert-success" role="alert">One Course successfully Updated...</div>
 	@endif
+
     <div class="col-md-6">
-
-        <h3>New Student</h3>
+    	<?php $course = Courses::find($course_id); ?>
+        <h3>New Student for {{$course->course}}: {{$course_id}}</h3>
         <hr>
-        <form class="form-horizontal" action="/course/courseSave" method="POST">
+        <form class="form-horizontal" action="/student/studentSave" method="POST">
+        	<input type="hidden" class="form-control" id="course_id" name="course_id" value="{{$course_id}}">
+			 
+			@if($scp->name == "on")
 			<div class="form-group">
-			    <label for="coursename" class="col-sm-2 control-label">Course Name</label>
-			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" id="coursename" name="coursename" placeholder="Enter Course name" required title="Course name Required">
+			    <label for="name" class="col-sm-4 control-label">Student Name</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="name" name="name" placeholder="Enter Student name" required title="Student name Required">
 			    </div>
 			</div>
+			@endif
 
+			@if($scp->fname == "on")
 			<div class="form-group">
-			    <label for="shortname" class="col-sm-2 control-label">Short Name</label>
-			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" id="shortname" name="shortname" placeholder="Enter Course Short name" required title="Course short name Required">
+			    <label for="fname" class="col-sm-4 control-label">Father's Name</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Father's name" required title="Student Father name Required">
 			    </div>
 			</div>
+			@endif
 
+			@if($scp->dob == "on")
 			<div class="form-group">
-			    <label for="duration" class="col-sm-2 control-label">Duration</label>
-			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" name="duration" id="duration" placeholder="Enter Course Duration" required title="Duration Required">
+			    <label for="dob" class="col-sm-4 control-label">Date of Birth</label>
+			    <div class="col-sm-4">
+			      	<input type="date" class="form-control" id="dob" name="dob" placeholder="Enter Date of Birth" required title="Date of Birth Required">
 			    </div>
 			</div>
+			@endif
 
+			@if($scp->pob == "on")
 			<div class="form-group">
-			    <label for="noSubject" class="col-sm-2 control-label">No of Subject</label>
-			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" name="noSubject" id="noSubject" placeholder="Enter Course no of subject" required title="No of Subject Required">
+			    <label for="pob" class="col-sm-4 control-label">Place of Birth</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="pob" name="pob" placeholder="Enter Place of Birth" required title="Place of Birth Required">
 			    </div>
 			</div>
+			@endif
 
+
+			@if($scp->gender == "on")
 			<div class="form-group">
-			    <label for="remarks" class="col-sm-2 control-label">Remarks</label>
-			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" name="remarks" id="remarks" placeholder="Enter remarks" >
+			    <label for="gender" class="col-sm-4 control-label">Gender</label>
+			    <div class="col-sm-4">
+			      	<select class="form-control" id="gender" name="gender" required>
+					  	<option selected="selected" value="">---Select Gender---</option>
+					  	<option value="Male">Male</option>
+					  	<option value="Female">Female</option>
+					</select>
 			    </div>
 			</div>
-
+			@endif
 			
+			@if($scp->nationality == "on")
 			<div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
+			    <label for="nationality" class="col-sm-4 control-label">Nationality</label>
+			    <div class="col-sm-4">
+			      	<input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter Nationality" required title="Nationality Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->contact_no == "on")
+			<div class="form-group">
+			    <label for="contact_no" class="col-sm-4 control-label">Contact no</label>
+			    <div class="col-sm-4">
+			      	<input type="number" min="1" min="99999999999" class="form-control" id="contact_no" name="contact_no" placeholder="Enter Contact" required title="Contact No Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->local_church_address == "on")
+			<div class="form-group">
+			    <label for="local_church_address" class="col-sm-4 control-label">Local Church Address</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="local_church_address" name="local_church_address" placeholder="Enter Local Church Address" required title="Local Church Address Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->street == "on")
+			<div class="form-group">
+			    <label for="street" class="col-sm-4 control-label">Street</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="street" name="street" placeholder="Enter Street" required title="Street Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->town == "on")
+			<div class="form-group">
+			    <label for="town" class="col-sm-4 control-label">Town</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="town" name="town" placeholder="Enter Town" required title="Town Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->district == "on")
+			<div class="form-group">
+			    <label for="district" class="col-sm-4 control-label">District</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="district" name="district" placeholder="Enter District" required title="District Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->state == "on")
+			<div class="form-group">
+			    <label for="state" class="col-sm-4 control-label">State</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="state" name="state" placeholder="Enter State" required title="State Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->pin == "on")
+			<div class="form-group">
+			    <label for="pin" class="col-sm-4 control-label">PIN Code</label>
+			    <div class="col-sm-3">
+			      	<input type="number" min="1" max="9999999"class="form-control" id="pin" name="pin" placeholder="Enter PIN" required title="PIN No Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->pstreet == "on")
+			<div class="form-group">
+			    <label for="pstreet" class="col-sm-4 control-label">Present Street</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="pstreet" name="pstreet" placeholder="Enter Present Street" required title="Present Street Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->ptown == "on")
+			<div class="form-group">
+			    <label for="ptown" class="col-sm-4 control-label">Present Town</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="ptown" name="ptown" placeholder="Enter Present Town" required title="Present Town Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->pdistrict == "on")
+			<div class="form-group">
+			    <label for="pdistrict" class="col-sm-4 control-label">Present District</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="pdistrict" name="pdistrict" placeholder="Enter Present District" required title="Present District Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->pstate == "on")
+			<div class="form-group">
+			    <label for="pstate" class="col-sm-4 control-label">Present State</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="pstate" name="pstate" placeholder="Enter Present State" required title="Present State Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->ppin == "on")
+			<div class="form-group">
+			    <label for="ppin" class="col-sm-4 control-label">Present PIN Code</label>
+			    <div class="col-sm-4">
+			      	<input type="number" min="1" max="9999999" class="form-control" id="ppin" name="ppin" placeholder="Enter Present PIN" required title="Present PIN No Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->guardian_name == "on")
+			<div class="form-group">
+			    <label for="guardian_name" class="col-sm-4 control-label">Guardian Name</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="guardian_name" name="guardian_name" placeholder="Enter Guardian Name" required title="Guardian Name Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->guardian_address == "on")
+			<div class="form-group">
+			    <label for="guardian_address" class="col-sm-4 control-label">Guardian Address</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="guardian_address" name="guardian_address" placeholder="Enter Guardian Address" required title="Guardian Address Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->yoa == "on")
+			<div class="form-group">
+			    <label for="yoa" class="col-sm-4 control-label">Year of Admission</label>
+			    <div class="col-sm-2">
+			      	<input type="number" min="1" max="9999" class="form-control" id="yoa" name="yoa" placeholder="YYYY" required title="Year of Admission Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->batch == "on")
+			<div class="form-group">
+			    <label for="batch" class="col-sm-4 control-label">Batch</label>
+			    <div class="col-sm-4">
+			      	<input type="number" min="1" max="10000" class="form-control" id="batch" name="batch" placeholder="Enter Batch No" required title="Batch No Required">
+			    </div>
+			</div>
+			@endif
+
+
+			@if($scp->ten_board == "on")
+			<div class="form-group">
+			    <label for="ten_board" class="col-sm-4 control-label">Class 10 Board</label>
+			    <div class="col-sm-8">
+			      	<input type="text"  class="form-control" id="ten_board" name="ten_board" placeholder="Enter Class 10 Board" required title="Class 10 Board Required">
+			    </div>
+			</div>
+			@endif
+
+
+			@if($scp->ten_year == "on")
+			<div class="form-group">
+			    <label for="ten_year" class="col-sm-4 control-label">Class 10 Year of Passing</label>
+			    <div class="col-sm-3">
+			      	<input type="number"  class="form-control" id="ten_year" name="ten_year" placeholder="Enter Class 10 Year" required title="Class 10 Year of Passing Required">
+			    </div>
+			</div>
+			@endif
+
+
+			@if($scp->ten_degree == "on")
+			<div class="form-group">
+			    <label for="ten_degree" class="col-sm-4 control-label">Class 10 Degree</label>
+			    <div class="col-sm-4">
+			      	<input type="text"  class="form-control" id="ten_degree" name="ten_degree" placeholder="Enter Class 10 Degree" required title="Class 10 Degree Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->ten_division == "on")
+			<div class="form-group">
+			    <label for="ten_division" class="col-sm-4 control-label">Class 10 Division</label>
+			    <div class="col-sm-4">
+			      	<input type="text"  class="form-control" id="ten_division" name="ten_division" placeholder="Enter Class 10 Division" required title="Class 10 Division Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->twelve_board == "on")
+			<div class="form-group">
+			    <label for="twelve_board" class="col-sm-4 control-label">Class 12 Board</label>
+			    <div class="col-sm-8">
+			      	<input type="text"  class="form-control" id="twelve_board" name="twelve_board" placeholder="Enter Class 12 Board" required title="Class 12 Board Required">
+			    </div>
+			</div>
+			@endif
+
+
+			@if($scp->twelve_year == "on")
+			<div class="form-group">
+			    <label for="twelve_year" class="col-sm-4 control-label">Class 12 Year of Passing</label>
+			    <div class="col-sm-3">
+			      	<input type="number"  class="form-control" id="twelve_year" name="twelve_year" placeholder="Enter Class 12 Year" required title="Class 12 Year of Passing Required">
+			    </div>
+			</div>
+			@endif
+
+
+			@if($scp->twelve_degree == "on")
+			<div class="form-group">
+			    <label for="twelve_degree" class="col-sm-4 control-label">Class 12 Degree</label>
+			    <div class="col-sm-4">
+			      	<input type="text"  class="form-control" id="twelve_degree" name="twelve_degree" placeholder="Enter Class 12 Degree" required title="Class 12 Degree Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->twelve_division == "on")
+			<div class="form-group">
+			    <label for="twelve_division" class="col-sm-4 control-label">Class 12 Division</label>
+			    <div class="col-sm-4">
+			      	<input type="text"  class="form-control" id="twelve_division" name="twelve_division" placeholder="Enter Class 12 Division" required title="Class 12 Division Required">
+			    </div>
+			</div>
+			@endif
+
+
+			@if($scp->degree_board == "on")
+			<div class="form-group">
+			    <label for="degree_board" class="col-sm-4 control-label">Degree Board/University</label>
+			    <div class="col-sm-8">
+			      	<input type="text"  class="form-control" id="degree_board" name="degree_board" placeholder="Enter Degree Board/University" required title="Degree Board/University Required">
+			    </div>
+			</div>
+			@endif
+
+
+			@if($scp->degree_year == "on")
+			<div class="form-group">
+			    <label for="degree_year" class="col-sm-4 control-label">Degree Year of Passing</label>
+			    <div class="col-sm-3">
+			      	<input type="number"  class="form-control" id="degree_year" name="degree_year" placeholder="Enter Degree Year" required title="Degree Year of Passing Required">
+			    </div>
+			</div>
+			@endif
+
+
+			@if($scp->degree_degree == "on")
+			<div class="form-group">
+			    <label for="degree_degree" class="col-sm-4 control-label">Degree</label>
+			    <div class="col-sm-4">
+			      	<input type="text"  class="form-control" id="degree_degree" name="degree_degree" placeholder="Enter Degree" required title="Degree Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->degree_division == "on")
+			<div class="form-group">
+			    <label for="degree_division" class="col-sm-4 control-label">Degree Division</label>
+			    <div class="col-sm-4">
+			      	<input type="text"  class="form-control" id="degree_division" name="degree_division" placeholder="Enter Degree Division" required title="Degree Division Required">
+			    </div>
+			</div>
+			@endif
+
+
+
+			@if($scp->job_id == "on")
+			<div class="form-group">
+			    <label for="job_id" class="col-sm-4 control-label">Designation</label>
+			    <div class="col-sm-4">
+			      	<?php $designations = Designations::all(); ?>
+			    	<select class="form-control" id="job_id" name="job_id" required>
+			    		<option selected="selected" value="">---Select Designation---</option>
+			    		@foreach($designations as $designation)
+			    			<option value="{{$designation->id}}">{{$designation->designation}}</option>
+			    		@endforeach
+			    	</select>
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->jobs_place == "on")
+			<div class="form-group">
+			    <label for="jobs_place" class="col-sm-4 control-label">Job Place</label>
+			    <div class="col-sm-8">
+			      	<input type="text"  class="form-control" id="jobs_place" name="jobs_place" placeholder="Enter Job Place" required title="Job Place Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->jobs_field == "on")
+			<div class="form-group">
+			    <label for="jobs_field" class="col-sm-4 control-label">Field Name</label>
+			    <div class="col-sm-8">
+			      	<input type="text"  class="form-control" id="jobs_field" name="jobs_field" placeholder="Enter Field Name" required title="Field Name Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->yoj == "on")
+			<div class="form-group">
+			    <label for="yoj" class="col-sm-4 control-label">Year of joining</label>
+			    <div class="col-sm-3">
+			      	<input type="number"  class="form-control" id="yoj" name="yoj" placeholder="Enter Year of Joining" required title="Year of joining Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->remarks == "on")
+			<div class="form-group">
+			    <label for="remarks" class="col-sm-4 control-label">Remarks</label>
+			    <div class="col-sm-8">
+			      	<input type="text"  class="form-control" id="remarks" name="remarks" placeholder="Enter Remarks" required title="Remarks Required">
+			    </div>
+			</div>
+			@endif
+
+
+			<div class="form-group">
+			    <div class="col-sm-offset-5 col-sm-7">
 			      	<button type="submit" class="btn btn-success">Save</button>
 			      	<button type="button" onclick="location.href='/dashboard'" class="btn btn-primary">Exit</button>
 			    </div>
@@ -66,53 +406,6 @@
 		</form>
     </div>
 
-	<div class="col-md-6">
-		<h3>Existing Courses</h3>
-		<hr>
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<td>#</td>
-					<td>Course Name</td>
-					<td>Duration</td>
-					<td>No.of Subj</td>
-					<td>Action</td>
-				</tr>
-			</thead>
-			<tbody>
-				@foreach($courses as $course)
-				<tr>
-					<td>{{$course->id}}</td>
-					<td>{{$course->course}}</td>
-					<td>{{$course->duration}}</td>
-					<td>{{$course->no_of_subjs}}</td>
-					<td>
-						<button type="button" onclick="location.href='/course/courseEdit/{{$course->id}}'" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit</button>
-						<button type="button"  class="btn btn-danger" data-toggle="modal" data-target="#myModal{{$course->id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</button>
-						<!-- Modal -->
-						<div class="modal fade" id="myModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-						  	<div class="modal-dialog" role="document">
-						    	<div class="modal-content">
-								    <div class="modal-header">
-								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								        <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
-								    </div>
-									<div class="modal-body">
-							        Are You Sure to Delete Course ID : {{$course->id}}
-							      	</div>
-							      	<div class="modal-footer">
-								        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-								        <button type="button" onclick="location.href='/course/courseDelete/<?php echo $course->id ? $course->id : '-';?>'" class="btn btn-danger">Delete</button>
-							      	</div>
-						    	</div>
-						  	</div>
-						</div>
-					</td>
-				</tr>
-				@endforeach
-			</tbody>
-		</table>
-					
-	</div>
+	
 </div>
 @endsection
