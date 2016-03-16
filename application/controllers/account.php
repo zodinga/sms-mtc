@@ -33,9 +33,10 @@ class Account_Controller extends Base_Controller {
 		}
 		$users = Users::all();
 
-		
+		$courses = Courses::all();
 		return View::make('account.create')
 			->with('users',$users)
+			->with('courses',$courses)
 			->with('conf',$conf);
 
 	}

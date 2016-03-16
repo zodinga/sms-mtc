@@ -18,49 +18,48 @@
 	@endif
     <div class="col-md-6">
 
-        <h3>Edit Course</h3>
+        <h3>New Course</h3>
         <hr>
-        <form class="form-horizontal" action="/course/courseUpdate" method="POST">
+        <form class="form-horizontal" action="/course/courseSave" method="POST">
 			<div class="form-group">
 			    <label for="coursename" class="col-sm-2 control-label">Course Name</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" id="coursename" name="coursename" value="{{$course->course}}" >
+			      	<input type="text" class="form-control" id="coursename" name="coursename" placeholder="Enter Course name" required title="Course name Required">
 			    </div>
 			</div>
 
 			<div class="form-group">
 			    <label for="shortname" class="col-sm-2 control-label">Short Name</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" id="shortname" name="shortname" value="{{$course->shortname}}" >
+			      	<input type="text" class="form-control" id="shortname" name="shortname" placeholder="Enter Course Short name" required title="Course short name Required">
 			    </div>
 			</div>
 
 			<div class="form-group">
 			    <label for="duration" class="col-sm-2 control-label">Duration</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" name="duration" value="{{$course->duration}}" id="duration" >
+			      	<input type="text" class="form-control" name="duration" id="duration" placeholder="Enter Course Duration" required title="Duration Required">
 			    </div>
 			</div>
 
 			<div class="form-group">
 			    <label for="noSubject" class="col-sm-2 control-label">No of Subject</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" name="noSubject" value="{{$course->no_of_subjs}}" id="noSubject" >
+			      	<input type="text" class="form-control" name="noSubject" id="noSubject" placeholder="Enter Course no of subject" required title="No of Subject Required">
 			    </div>
 			</div>
 
 			<div class="form-group">
 			    <label for="remarks" class="col-sm-2 control-label">Remarks</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" name="remarks" value="{{$course->remarks}}" id="remarks"  >
+			      	<input type="text" class="form-control" name="remarks" id="remarks" placeholder="Enter remarks" >
 			    </div>
 			</div>
 
 			
 			<div class="form-group">
 			    <div class="col-sm-offset-2 col-sm-10">
-			    	<input type="hidden" value="{{$course->id}}" name="id">
-			      	<button type="submit" class="btn btn-success">Update</button>
+			      	<button type="submit" class="btn btn-success">Save</button>
 			      	<button type="button" onclick="location.href='/dashboard'" class="btn btn-primary">Exit</button>
 			    </div>
 			</div>
