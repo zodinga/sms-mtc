@@ -1,4 +1,4 @@
-
+<?php $courses=Courses::all(); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -90,8 +90,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Staff Entry <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/student/staffCreate"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Staff</a></li>
-                                <li><a href="/student/staffExisting"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Staff</a></li>
+                                <li><a href="/staff/staffCreate"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Staff</a></li>
+                                <li><a href="/staff/staffExisting"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Staff</a></li>
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
