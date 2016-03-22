@@ -10,10 +10,10 @@
         <link rel="icon" href="../../favicon.ico">
 
         <title>Student Management System : MTC</title>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-        <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
-        <link href="bootstrap/css/carousel.css" rel="stylesheet">
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <script src="../../bootstrap/js/ie-emulation-modes-warning.js"></script>
+        <link href="../../bootstrap/css/carousel.css" rel="stylesheet">
     </head>
 <body>
     <div class="navbar-wrapper">
@@ -27,22 +27,19 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/">Student Management System : Missionary Training College</a>
+                        <a class="navbar-brand" href="/home">Student Management System : Missionary Training College</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                            <li class="active"><a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                            
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Advanced Search <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    @foreach($courses as $course)
+                                    <li><a href="/home/studentExisting/{{$course->id}}"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Student ({{$course->course}})</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li><a href="/login_form"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
@@ -63,8 +60,8 @@
         @yield('content-2')
         <!-- FOOTER -->
         <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            <p class="pull-right"><a href="#"><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span></a></p>
+            <p>&copy; 2016 Missionary Training College, Mission Veng Aizawl. &middot;</p>
         </footer>
     </div><!-- /.container -->
 
@@ -72,12 +69,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="bootstrap/js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="bootstrap/js/jquery.min.js"><\/script>')</script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../bootstrap/js/jquery.min.js"><\/script>')</script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="bootstrap/js/holder.min.js"></script>
+    <script src="../../bootstrap/js/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../bootstrap/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

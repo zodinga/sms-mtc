@@ -75,9 +75,6 @@
                                 <li><a href="/student/studentExisting/{{$course->id}}"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Student ({{$course->course}})</a></li>
                                 <li role="separator" class="divider"></li>
                                 @endforeach
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -87,9 +84,6 @@
                                 <li><a href="/student/studentCreate/{{$course->id}}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> {{$course->course}}</a></li>
                                 <li role="separator" class="divider"></li>
                                 @endforeach
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
 
@@ -99,9 +93,6 @@
                                 <li><a href="/student/staffCreate"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Staff</a></li>
                                 <li><a href="/student/staffExisting"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Staff</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
 
@@ -112,9 +103,6 @@
                                 <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Staff</a></li>
                                 <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Result</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
                     </ul>

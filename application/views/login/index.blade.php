@@ -10,7 +10,7 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-        <button class="btn btn-lg btn-success btn-block" onclick="location.href='/'">Back to home</button>
+        <button class="btn btn-lg btn-success btn-block" onclick="location.href='/home'">Back to home</button>
 		<hr>
 		@if($conf == 1)
 			<div class="alert alert-danger" role="alert">Login Error: Password or Username mismatch</div>

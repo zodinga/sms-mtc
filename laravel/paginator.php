@@ -183,9 +183,9 @@ class Paginator {
 			$links = $this->slider($adjacent);
 		}
 
-		$content = '<ul>' . $this->previous() . $links . $this->next() . '</ul>';
+		$content = '<ul class="pagination">' . $this->previous() . $links . $this->next() . '</ul>';
 
-		return '<div class="pagination">'.$content.'</div>';
+		return $content;
 	}
 
 	/**

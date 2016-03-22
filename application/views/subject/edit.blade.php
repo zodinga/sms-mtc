@@ -48,7 +48,7 @@
 
 					$newformat = date('Y-m-d',$time);
 
-			    	?>
+		    	?>
 			      	<input type="date" class="form-control" name="syllabus_start_date" id="syllabus_start_date" value="{{$newformat}}">
 			    	
 			    </div>
