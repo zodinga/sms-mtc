@@ -1,4 +1,4 @@
-
+<?php $courses = Courses::all();?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
