@@ -108,6 +108,20 @@
 										</tr>
 										@endif
 
+										@if($scp->internal_registration == "on")
+										<tr>
+										    <td>Internal Registration No</td>
+										    <td>{{$student->internal_registration}}</td>
+										</tr>
+										@endif
+
+										@if($scp->university_registration == "on")
+										<tr>
+										    <td>University Registration No</td>
+										    <td>{{$student->university_registration}}</td>
+										</tr>
+										@endif
+
 										@if($scp->dob == "on")
 										<tr>
 										    <td>Date of Birth</td>
@@ -344,7 +358,7 @@
 										@if($scp->job_id == "on")
 										<tr>
 										    <td>Designation</td>
-										    <td><?php $designation = Designations::find($student->job_id); ?>{{$designation->designation}}</td>
+										    <td><?php $desig = Designations::find($student->job_id); //dd($student->job_id); ?>{{$desig ? $designation->designation : '-'}}</td>
 										</tr>
 										@endif
 
@@ -366,6 +380,13 @@
 										<tr>
 										    <td>Year of joining</td>
 										    <td>{{$student->yoj}}</td>
+										</tr>
+										@endif
+
+										@if($scp->status == "on")
+										<tr>
+										    <td>Status</td>
+										    <td>{{$student->status}}</td>
 										</tr>
 										@endif
 

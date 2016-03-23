@@ -42,6 +42,24 @@
 			</div>
 			@endif
 
+			@if($scp->internal_registration == "on")
+			<div class="form-group">
+			    <label for="internal_registration" class="col-sm-4 control-label">Internal Registration No</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="internal_registration" name="internal_registration" placeholder="Enter Internal Registration No" >
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->university_registration == "on")
+			<div class="form-group">
+			    <label for="university_registration" class="col-sm-4 control-label">University Registration No</label>
+			    <div class="col-sm-8">
+			      	<input type="text" class="form-control" id="university_registration" name="university_registration" placeholder="Enter University Registration No" >
+			    </div>
+			</div>
+			@endif
+
 			@if($scp->dob == "on")
 			<div class="form-group">
 			    <label for="dob" class="col-sm-4 control-label">Date of Birth</label>
@@ -383,6 +401,22 @@
 			    <label for="yoj" class="col-sm-4 control-label">Year of joining</label>
 			    <div class="col-sm-3">
 			      	<input type="number"  class="form-control" id="yoj" name="yoj" placeholder="Enter Year of Joining" required title="Year of joining Required">
+			    </div>
+			</div>
+			@endif
+
+			@if($scp->status == "on")
+			<div class="form-group">
+			    <label for="status" class="col-sm-4 control-label">Status</label>
+			    <div class="col-sm-3">
+			    	<select class="form-control" name="status" required title="Status Required">
+			    		<option selected="selected" value="">---Select Status---</option>
+			    		<option value="Ongoing">Ongoing</option>
+			    		<option value="Completed">Completed</option>
+			    		<option value="Discontinue">Discontinue</option>
+			    		<option value="Dropout">Dropout</option>
+			    		<option value="Other">Other</option>
+			    	</select>
 			    </div>
 			</div>
 			@endif

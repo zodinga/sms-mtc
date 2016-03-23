@@ -66,6 +66,8 @@ class Student_Controller extends Base_Controller {
 		$student->course_id = Input::get("course_id");
 		$student->name = Input::get("name");
 		$student->fname = Input::get("fname");
+		$student->university_registration = Input::get("university_registration");
+		$student->university_registration = Input::get("university_registration");
 		$student->dob = Input::get("dob");
 		$student->pob = Input::get("pob");
 		$student->gender = Input::get("gender");
@@ -102,6 +104,7 @@ class Student_Controller extends Base_Controller {
 		$student->jobs_place = Input::get("jobs_place");
 		$student->jobs_field = Input::get("jobs_field");
 		$student->yoj = Input::get("yoj");
+		$student->status = Input::get("status");
 		$student->remarks = Input::get("remarks");
 		$student->save();
 		return Redirect::to('student')
@@ -123,6 +126,7 @@ class Student_Controller extends Base_Controller {
 		$courses = Courses::all();
 		$scp = StudentCoursePivots::where('course_id','=',$id)->first();
 		$students = Students::where('course_id','=',$id)->order_by('yoa','DESC')->paginate('30');
+		//dd($students);
 		return View::make('student.list')
 			->with('conf',$conf)
 			->with('scp',$scp)
@@ -159,6 +163,8 @@ class Student_Controller extends Base_Controller {
 		$student->course_id = $student->course_id;
 		$student->name = Input::get("name");
 		$student->fname = Input::get("fname");
+		$student->university_registration = Input::get("university_registration");
+		$student->university_registration = Input::get("university_registration");
 		$student->dob = Input::get("dob");
 		$student->pob = Input::get("pob");
 		$student->gender = Input::get("gender");
@@ -195,6 +201,7 @@ class Student_Controller extends Base_Controller {
 		$student->jobs_place = Input::get("jobs_place");
 		$student->jobs_field = Input::get("jobs_field");
 		$student->yoj = Input::get("yoj");
+		$student->status = Input::get("status");
 		$student->remarks = Input::get("remarks");
 		$student->save();
 		return Redirect::to('student')

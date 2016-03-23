@@ -71,6 +71,40 @@
 					</tr>
 
 					<tr>
+						<td>Internal Registration</td>
+						<?php $courses = Courses::all(); ?>
+						@foreach($courses as $course)
+						<td>
+							<?php $scp = StudentCoursePivots::where('course_id','=',$course->id)->first(); ?>
+							@if($scp)
+							<div class="checkbox">
+							  	<label>
+							    	<input type="checkbox" name="internal_registration{{$course->id}}"  <?php if ($scp->internal_registration == "on") echo "checked"; ?>>
+							  	</label>
+							</div>
+							@endif
+						</td>
+						@endforeach
+					</tr>
+
+					<tr>
+						<td>University Registration</td>
+						<?php $courses = Courses::all(); ?>
+						@foreach($courses as $course)
+						<td>
+							<?php $scp = StudentCoursePivots::where('course_id','=',$course->id)->first(); ?>
+							@if($scp)
+							<div class="checkbox">
+							  	<label>
+							    	<input type="checkbox" name="university_registration{{$course->id}}"  <?php if ($scp->university_registration == "on") echo "checked"; ?>>
+							  	</label>
+							</div>
+							@endif
+						</td>
+						@endforeach
+					</tr>
+
+					<tr>
 						<td>Date of Birth</td>
 						<?php $courses = Courses::all(); ?>
 						@foreach($courses as $course)
@@ -693,6 +727,23 @@
 							<div class="checkbox">
 							  	<label>
 							    	<input type="checkbox" name="yoj{{$course->id}}" <?php if ($scp->yoj == "on") echo "checked"; ?>>
+							  	</label>
+							</div>
+							@endif
+						</td>
+						@endforeach
+					</tr>
+
+					<tr>
+						<td>Status</td>
+						<?php $courses = Courses::all(); ?>
+						@foreach($courses as $course)
+						<td>
+							<?php $scp = StudentCoursePivots::where('course_id','=',$course->id)->first(); ?>
+							@if($scp)
+							<div class="checkbox">
+							  	<label>
+							    	<input type="checkbox" name="status{{$course->id}}" <?php if ($scp->status == "on") echo "checked"; ?>>
 							  	</label>
 							</div>
 							@endif
