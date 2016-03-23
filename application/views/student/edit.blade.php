@@ -235,7 +235,7 @@
 			@if($scp->ten_board == "on")
 			<div class="form-group">
 			    <label for="ten_board" class="col-sm-4 control-label">Class 10 Board</label>
-			    <div class="col-sm-8">
+			    <div class="col-sm-4">
 			      	<input type="text" value="{{$student->ten_board}}"  class="form-control" id="ten_board" name="ten_board" placeholder="Enter Class 10 Board" required title="Class 10 Board Required">
 			    </div>
 			</div>
@@ -245,8 +245,8 @@
 			@if($scp->ten_year == "on")
 			<div class="form-group">
 			    <label for="ten_year" class="col-sm-4 control-label">Class 10 Year of Passing</label>
-			    <div class="col-sm-3">
-			      	<input type="number" value="{{$student->ten_year}}"  class="form-control" id="ten_year" name="ten_year" placeholder="Enter Class 10 Year" required title="Class 10 Year of Passing Required">
+			    <div class="col-sm-2">
+			      	<input type="number" value="{{$student->ten_year}}"  class="form-control" id="ten_year" name="ten_year" placeholder="YYYY" required title="Class 10 Year of Passing Required">
 			    </div>
 			</div>
 			@endif
@@ -273,7 +273,7 @@
 			@if($scp->twelve_board == "on")
 			<div class="form-group">
 			    <label for="twelve_board" class="col-sm-4 control-label">Class 12 Board</label>
-			    <div class="col-sm-8">
+			    <div class="col-sm-4">
 			      	<input type="text" value="{{$student->twelve_board}}"  class="form-control" id="twelve_board" name="twelve_board" placeholder="Enter Class 12 Board" required title="Class 12 Board Required">
 			    </div>
 			</div>
@@ -283,8 +283,8 @@
 			@if($scp->twelve_year == "on")
 			<div class="form-group">
 			    <label for="twelve_year" class="col-sm-4 control-label">Class 12 Year of Passing</label>
-			    <div class="col-sm-3">
-			      	<input type="number" value="{{$student->twelve_year}}"  class="form-control" id="twelve_year" name="twelve_year" placeholder="Enter Class 12 Year" required title="Class 12 Year of Passing Required">
+			    <div class="col-sm-2">
+			      	<input type="number" value="{{$student->twelve_year}}"  class="form-control" id="twelve_year" name="twelve_year" placeholder="YYYY" required title="Class 12 Year of Passing Required">
 			    </div>
 			</div>
 			@endif
@@ -312,7 +312,7 @@
 			@if($scp->degree_board == "on")
 			<div class="form-group">
 			    <label for="degree_board" class="col-sm-4 control-label">Degree Board/University</label>
-			    <div class="col-sm-8">
+			    <div class="col-sm-4">
 			      	<input type="text" value="{{$student->degree_board}}"  class="form-control" id="degree_board" name="degree_board" placeholder="Enter Degree Board/University" required title="Degree Board/University Required">
 			    </div>
 			</div>
@@ -322,8 +322,8 @@
 			@if($scp->degree_year == "on")
 			<div class="form-group">
 			    <label for="degree_year" class="col-sm-4 control-label">Degree Year of Passing</label>
-			    <div class="col-sm-3">
-			      	<input type="number" value="{{$student->degree_year}}"  class="form-control" id="degree_year" name="degree_year" placeholder="Enter Degree Year" required title="Degree Year of Passing Required">
+			    <div class="col-sm-2">
+			      	<input type="number" value="{{$student->degree_year}}"  class="form-control" id="degree_year" name="degree_year" placeholder="YYYY" required title="Degree Year of Passing Required">
 			    </div>
 			</div>
 			@endif
@@ -421,7 +421,7 @@
 
 
 			<div class="form-group">
-			    <div class="col-sm-offset-5 col-sm-7">
+			    <div class="col-sm-offset-4 col-sm-4">
 			    	<input type="hidden" name="id" value="{{$student->id}}">
 			      	<button type="submit" class="btn btn-success">Update</button>
 			      	<button type="button" onclick="location.href='/dashboard'" class="btn btn-primary">Exit</button>

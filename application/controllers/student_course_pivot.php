@@ -30,6 +30,8 @@ class Student_course_pivot_Controller extends Base_Controller {
 			$photo = "photo".$course->id;
 			$name = "name".$course->id;
 			$fname ="fname".$course->id;
+			$internal_registration ="internal_registration".$course->id;
+			$university_registration ="university_registration".$course->id;
 			$dob = "dob".$course->id;
 			$pob = "pob".$course->id;
 			$gender = "gender".$course->id;
@@ -66,12 +68,15 @@ class Student_course_pivot_Controller extends Base_Controller {
 			$jobs_place = "jobs_place".$course->id;
 			$jobs_field = "jobs_field".$course->id;
 			$yoj = "yoj".$course->id;
+			$status = "status".$course->id;
 			$remarks = "remarks".$course->id;
 
 			$scp = StudentCoursePivots::where('course_id','=',$course->id)->first();
 			$scp->photo = Input::get($photo);
 			$scp->name = Input::get($name);
 			$scp->fname = Input::get($fname);
+			$scp->internal_registration = Input::get($internal_registration);
+			$scp->university_registration = Input::get($university_registration);
 			$scp->dob = Input::get($dob);
 			$scp->pob = Input::get($pob);
 			$scp->gender = Input::get($gender);
@@ -108,6 +113,7 @@ class Student_course_pivot_Controller extends Base_Controller {
 			$scp->jobs_place = Input::get($jobs_place);
 			$scp->jobs_field = Input::get($jobs_field);
 			$scp->yoj = Input::get($yoj);
+			$scp->status = Input::get($statuss);
 			$scp->remarks = Input::get($remarks);
 			$scp->save();
 		}

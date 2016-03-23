@@ -96,7 +96,7 @@
 			<div class="form-group">
 			    <label for="nationality" class="col-sm-4 control-label">Nationality</label>
 			    <div class="col-sm-4">
-			      	<input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter Nationality" required title="Nationality Required">
+			      	<input type="text" class="form-control" id="nationality" value="Indian" name="nationality" placeholder="Enter Nationality" required title="Nationality Required">
 			    </div>
 			</div>
 			@endif
@@ -150,7 +150,7 @@
 			<div class="form-group">
 			    <label for="state" class="col-sm-4 control-label">State</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="state" name="state" placeholder="Enter State" required title="State Required">
+			      	<input type="text" class="form-control" id="state" name="state" value="Mizoram" placeholder="Enter State" required title="State Required">
 			    </div>
 			</div>
 			@endif
@@ -159,7 +159,7 @@
 			<div class="form-group">
 			    <label for="pin" class="col-sm-4 control-label">PIN Code</label>
 			    <div class="col-sm-3">
-			      	<input type="number" min="1" max="9999999"class="form-control" id="pin" name="pin" placeholder="Enter PIN" required title="PIN No Required">
+			      	<input type="number" min="1" max="9999999"class="form-control" id="pin" value="796001" name="pin" placeholder="Enter PIN" required title="PIN No Required">
 			    </div>
 			</div>
 			@endif
@@ -204,7 +204,7 @@
 			<div class="form-group">
 			    <label for="ppin" class="col-sm-4 control-label">Present PIN Code</label>
 			    <div class="col-sm-4">
-			      	<input type="number" min="1" max="9999999" class="form-control" id="ppin" name="ppin" placeholder="Enter Present PIN" required title="Present PIN No Required">
+			      	<input type="number" min="1" max="9999999" class="form-control" id="ppin" name="ppin" value="796001" placeholder="Enter Present PIN" required title="Present PIN No Required">
 			    </div>
 			</div>
 			@endif
@@ -249,7 +249,7 @@
 			@if($scp->ten_board == "on")
 			<div class="form-group">
 			    <label for="ten_board" class="col-sm-4 control-label">Class 10 Board</label>
-			    <div class="col-sm-8">
+			    <div class="col-sm-3">
 			      	<input type="text"  class="form-control" id="ten_board" name="ten_board" placeholder="Enter Class 10 Board" required title="Class 10 Board Required">
 			    </div>
 			</div>
@@ -259,8 +259,8 @@
 			@if($scp->ten_year == "on")
 			<div class="form-group">
 			    <label for="ten_year" class="col-sm-4 control-label">Class 10 Year of Passing</label>
-			    <div class="col-sm-3">
-			      	<input type="number"  class="form-control" id="ten_year" name="ten_year" placeholder="Enter Class 10 Year" required title="Class 10 Year of Passing Required">
+			    <div class="col-sm-2">
+			      	<input type="number"  class="form-control" id="ten_year" name="ten_year" placeholder="YYYY" required title="Class 10 Year of Passing Required">
 			    </div>
 			</div>
 			@endif
@@ -287,7 +287,7 @@
 			@if($scp->twelve_board == "on")
 			<div class="form-group">
 			    <label for="twelve_board" class="col-sm-4 control-label">Class 12 Board</label>
-			    <div class="col-sm-8">
+			    <div class="col-sm-4">
 			      	<input type="text"  class="form-control" id="twelve_board" name="twelve_board" placeholder="Enter Class 12 Board" required title="Class 12 Board Required">
 			    </div>
 			</div>
@@ -297,8 +297,8 @@
 			@if($scp->twelve_year == "on")
 			<div class="form-group">
 			    <label for="twelve_year" class="col-sm-4 control-label">Class 12 Year of Passing</label>
-			    <div class="col-sm-3">
-			      	<input type="number"  class="form-control" id="twelve_year" name="twelve_year" placeholder="Enter Class 12 Year" required title="Class 12 Year of Passing Required">
+			    <div class="col-sm-2">
+			      	<input type="number"  class="form-control" id="twelve_year" name="twelve_year" placeholder="YYYY" required title="Class 12 Year of Passing Required">
 			    </div>
 			</div>
 			@endif
@@ -326,7 +326,7 @@
 			@if($scp->degree_board == "on")
 			<div class="form-group">
 			    <label for="degree_board" class="col-sm-4 control-label">Degree Board/University</label>
-			    <div class="col-sm-8">
+			    <div class="col-sm-4">
 			      	<input type="text"  class="form-control" id="degree_board" name="degree_board" placeholder="Enter Degree Board/University" required title="Degree Board/University Required">
 			    </div>
 			</div>
@@ -336,8 +336,8 @@
 			@if($scp->degree_year == "on")
 			<div class="form-group">
 			    <label for="degree_year" class="col-sm-4 control-label">Degree Year of Passing</label>
-			    <div class="col-sm-3">
-			      	<input type="number"  class="form-control" id="degree_year" name="degree_year" placeholder="Enter Degree Year" required title="Degree Year of Passing Required">
+			    <div class="col-sm-2">
+			      	<input type="number"  class="form-control" id="degree_year" name="degree_year" placeholder="YYYY" required title="Degree Year of Passing Required">
 			    </div>
 			</div>
 			@endif
@@ -410,7 +410,7 @@
 			    <label for="status" class="col-sm-4 control-label">Status</label>
 			    <div class="col-sm-3">
 			    	<select class="form-control" name="status" required title="Status Required">
-			    		<option selected="selected" value="">---Select Status---</option>
+			    		<option selected="selected" value="">---Status---</option>
 			    		<option value="Ongoing">Ongoing</option>
 			    		<option value="Completed">Completed</option>
 			    		<option value="Discontinue">Discontinue</option>
@@ -432,7 +432,7 @@
 
 
 			<div class="form-group">
-			    <div class="col-sm-offset-5 col-sm-7">
+			    <div class="col-sm-offset-4 col-sm-4">
 			      	<button type="submit" class="btn btn-success">Save</button>
 			      	<button type="button" onclick="location.href='/dashboard'" class="btn btn-primary">Exit</button>
 			    </div>
