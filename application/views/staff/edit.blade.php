@@ -181,17 +181,5 @@
 	</div>
 </div>
 
-<script>
-$("#photo").fileinput({
 
-        allowedFileExtensions : ['jpg', 'png','gif','jpeg'],
-
-        maxFileSize: 250,
-        maxFilesNum: 1,
-
-        slugCallback: function(filename) {
-            return filename.replace('(', '_').replace(']', '_');
-        }
-    });
-</script>
 @endsection

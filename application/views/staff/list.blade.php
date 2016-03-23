@@ -24,7 +24,6 @@
         	<thead>
         		<tr>
         			<td><strong>#</strong></td>
-        			<td><strong>Photo</strong></td>
         			<td><strong>Name</strong></td>
         			<td><strong>Fatehers Name</strong></td>
         			<td><strong>Contact</strong></td>
@@ -41,15 +40,6 @@
         		@foreach($staffs as $staff)
         		<tr>
         			<td>{{$staff->id}}</td>
-        			 <td>	<?php
-      							$photo = "/image/user.jpg";
-							      if($staff->photo != NULL)
-							      {
-							        $photo = $staff->photo;
-							      }
-      						?>
-      					<img src="<?php echo $photo;?>" height="100" width="100" alt="student-photo" class="img-rounded">
-  					</td>
         			<td>{{$staff->name}}</td>
         			<td>{{$staff->fname ? $staff->fname : '-'}}</td>
         			<td>{{$staff->contact_no ? $staff->contact_no : '-'}}</td>
