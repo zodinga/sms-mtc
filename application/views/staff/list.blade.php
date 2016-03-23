@@ -53,7 +53,8 @@
         			<td>{{$staff->name}}</td>
         			<td>{{$staff->fname ? $staff->fname : '-'}}</td>
         			<td>{{$staff->contact_no ? $staff->contact_no : '-'}}</td>
-        			<td>{{$staff->desig ? $staff->desig : '-'}}</td>
+                    <?php $desig = Designations::find($staff->desig);?>
+        			<td>{{$desig->designation ? $desig->designation : '-'}}</td>
         			<?php $doj=date_create($staff->date_of_joining); ?>
 					<td>{{date_format($doj,"d/m/Y")}}</td>
         			<?php $dob=date_create($staff->dob); ?>

@@ -14,8 +14,10 @@ class Staff_Controller extends Base_Controller {
 			$conf = 0;
 		}
 		$staff = Staffs::all();
+		$designations = Designations::all();
 		return View::make('staff.create')
 			->with('staff',$staff)
+			->with('designations',$designations)
 			->with('conf',$conf);
 	}
 
@@ -32,11 +34,12 @@ class Staff_Controller extends Base_Controller {
 			$conf = 0;
 		}
 		$staff = Staffs::all();
-
-		$courses=Courses::all();
+		$designations = Designations::all();
+		$courses = Courses::all();
 		return View::make('staff.create')
 			->with('staff',$staff)
 			->with('conf',$conf)
+			->with('designations',$designations)
 			->with('courses',$courses);
 
 	}
@@ -74,9 +77,13 @@ class Staff_Controller extends Base_Controller {
 			$conf = 0;
 		}
 		$staff = Staffs::find($id);
+		$designations = Designations::all();
+		$desig= Designations::find($staff->desig);
 		$staffs = Staffs::all();
 		return View::make('staff.edit')
 			->with('conf',$conf)
+			->with('designations',$designations)
+			->with('desig',$desig)
 			->with('staffs',$staffs)
 			->with('staff',$staff);
 

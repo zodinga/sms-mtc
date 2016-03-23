@@ -49,12 +49,10 @@ class Create_Students_Table {
                    $table->string('degree_year',20)->nullable();
                    $table->string('degree_degree',50)->nullable();
                    $table->string('degree_division',20)->nullable();
-                   //short course
                    $table->integer('job_id')->nullable();
                    $table->string('jobs_place',50)->nullable();
                    $table->string('jobs_field',50)->nullable();
                    $table->string('yoj',50)->nullable();
-                   //end short course
                    $table->string('remarks')->nullable();
                    $table->timestamps();
                 });
