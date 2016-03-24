@@ -358,7 +358,7 @@
 										@if($scp->job_id == "on")
 										<tr>
 										    <td>Designation</td>
-										    <td><?php $desig = Designations::find($student->job_id); //dd($student->job_id); ?>{{$desig ? $designation->designation : '-'}}</td>
+										    <td><?php $desig = Designations::find($student->job_id); //dd($student->job_id); ?>{{$desig ? $desig->designation : '-'}}</td>
 										</tr>
 										@endif
 

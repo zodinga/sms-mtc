@@ -66,7 +66,7 @@ class Student_Controller extends Base_Controller {
 		$student->course_id = Input::get("course_id");
 		$student->name = Input::get("name");
 		$student->fname = Input::get("fname");
-		$student->university_registration = Input::get("university_registration");
+		$student->internal_registration = Input::get("internal_registration");
 		$student->university_registration = Input::get("university_registration");
 		$student->dob = Input::get("dob");
 		$student->pob = Input::get("pob");
@@ -163,7 +163,7 @@ class Student_Controller extends Base_Controller {
 		$student->course_id = $student->course_id;
 		$student->name = Input::get("name");
 		$student->fname = Input::get("fname");
-		$student->university_registration = Input::get("university_registration");
+		$student->internal_registration = Input::get("internal_registration");
 		$student->university_registration = Input::get("university_registration");
 		$student->dob = Input::get("dob");
 		$student->pob = Input::get("pob");

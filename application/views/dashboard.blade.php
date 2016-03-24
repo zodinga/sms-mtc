@@ -83,7 +83,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Result Entry <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 @foreach($courses as $course)
-                                <li><a href="/student/studentCreate/{{$course->id}}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> {{$course->course}}</a></li>
+                                <li><a href="/result/resultStudent/{{$course->id}}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> {{$course->course}}</a></li>
                                 <li role="separator" class="divider"></li>
                                 @endforeach
                             </ul>
@@ -108,6 +108,7 @@
                             </ul>
                         </li>
                     </ul>
+                    <!--
                     <form class="navbar-form navbar-left">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search Student/Staff...">
@@ -126,6 +127,7 @@
                             </ul>
                         </li>
                     </ul>
+                    -->
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
