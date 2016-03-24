@@ -160,7 +160,6 @@
 												{	
 													foreach ($results as $result) {
 														$subject = Subjects::find($result->subj_id);
-														var_dump($subject->subject);
 														echo "<tr>";
 														echo "<td>".$subject->subject." : FM (".$subject->fullmark.") PM(".$subject->passmark.")</td><td>".$result->marks_scored."</td>"; 
 														echo "</tr>";
