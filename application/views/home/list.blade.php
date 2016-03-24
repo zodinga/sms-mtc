@@ -92,10 +92,10 @@
 								        <h4 class="modal-title" id="myModalLabel">STUDENT DETAILS : </h4>
 							      	</div>
 							      	<div class="modal-body">
-							      	<table class="table table-hover">
+							      	<table class="table table-condensed">
 							        	<tr>
-										    <td>COURSE</td>
-										    <td>{{$course->course}}</td>
+										    <td><b>COURSE</b></td>
+										    <td><b>{{$course->course}}</b></td>
 										</tr>
 							        	@if($scp->name == "on")
 										<tr>
@@ -178,7 +178,7 @@
 										@if($scp->pin == "on")
 										<tr>
 										    <td>PIN Code</td>
-										    <td> class="col-sm-3">{{$student->pin}}</td>
+										    <td>{{$student->pin}}</td>
 										</tr>
 										@endif
 
