@@ -37,7 +37,7 @@
 			<div class="form-group">
 			    <label for="fname" class="col-sm-4 control-label">Father's Name</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Father's name" required title="Student Father name Required">
+			      	<input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Father's name">
 			    </div>
 			</div>
 			@endif
@@ -64,7 +64,7 @@
 			<div class="form-group">
 			    <label for="dob" class="col-sm-4 control-label">Date of Birth</label>
 			    <div class="col-sm-4">
-			      	<input type="date" class="form-control" id="dob" name="dob" placeholder="Enter Date of Birth" required title="Date of Birth Required">
+			      	<input type="date" class="form-control" id="dob" name="dob" placeholder="Enter Date of Birth">
 			    </div>
 			</div>
 			@endif
@@ -73,7 +73,7 @@
 			<div class="form-group">
 			    <label for="pob" class="col-sm-4 control-label">Place of Birth</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="pob" name="pob" placeholder="Enter Place of Birth" required title="Place of Birth Required">
+			      	<input type="text" class="form-control" id="pob" name="pob" placeholder="Enter Place of Birth">
 			    </div>
 			</div>
 			@endif
@@ -83,7 +83,7 @@
 			<div class="form-group">
 			    <label for="gender" class="col-sm-4 control-label">Gender</label>
 			    <div class="col-sm-4">
-			      	<select class="form-control" id="gender" name="gender" required>
+			      	<select class="form-control" id="gender" name="gender">
 					  	<option selected="selected" value="">---Select Gender---</option>
 					  	<option value="Male">Male</option>
 					  	<option value="Female">Female</option>
@@ -96,7 +96,7 @@
 			<div class="form-group">
 			    <label for="nationality" class="col-sm-4 control-label">Nationality</label>
 			    <div class="col-sm-4">
-			      	<input type="text" class="form-control" id="nationality" value="Indian" name="nationality" placeholder="Enter Nationality" required title="Nationality Required">
+			      	<input type="text" class="form-control" id="nationality" value="Indian" name="nationality" placeholder="Enter Nationality">
 			    </div>
 			</div>
 			@endif
@@ -105,7 +105,7 @@
 			<div class="form-group">
 			    <label for="contact_no" class="col-sm-4 control-label">Contact no</label>
 			    <div class="col-sm-4">
-			      	<input type="number" min="1" min="99999999999" class="form-control" id="contact_no" name="contact_no" placeholder="Enter Contact" required title="Contact No Required">
+			      	<input type="number" min="1" min="99999999999" class="form-control" id="contact_no" name="contact_no" placeholder="Enter Contact">
 			    </div>
 			</div>
 			@endif
@@ -114,7 +114,7 @@
 			<div class="form-group">
 			    <label for="local_church_address" class="col-sm-4 control-label">Local Church Address</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="local_church_address" name="local_church_address" placeholder="Enter Local Church Address" required title="Local Church Address Required">
+			      	<input type="text" class="form-control" id="local_church_address" name="local_church_address" placeholder="Enter Local Church Address">
 			    </div>
 			</div>
 			@endif
@@ -123,7 +123,7 @@
 			<div class="form-group">
 			    <label for="street" class="col-sm-4 control-label">Street</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="street" name="street" placeholder="Enter Street" required title="Street Required">
+			      	<input type="text" class="form-control" id="street" name="street" placeholder="Enter Street">
 			    </div>
 			</div>
 			@endif
@@ -132,7 +132,7 @@
 			<div class="form-group">
 			    <label for="town" class="col-sm-4 control-label">Town</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="town" name="town" placeholder="Enter Town" required title="Town Required">
+			      	<input type="text" class="form-control" id="town" name="town" placeholder="Enter Town">
 			    </div>
 			</div>
 			@endif
@@ -141,7 +141,7 @@
 			<div class="form-group">
 			    <label for="district" class="col-sm-4 control-label">District</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="district" name="district" placeholder="Enter District" required title="District Required">
+			      	<input type="text" class="form-control" id="district" name="district" placeholder="Enter District">
 			    </div>
 			</div>
 			@endif
@@ -150,7 +150,7 @@
 			<div class="form-group">
 			    <label for="state" class="col-sm-4 control-label">State</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="state" name="state" value="Mizoram" placeholder="Enter State" required title="State Required">
+			      	<input type="text" class="form-control" id="state" name="state" value="Mizoram" placeholder="Enter State">
 			    </div>
 			</div>
 			@endif
@@ -159,7 +159,7 @@
 			<div class="form-group">
 			    <label for="pin" class="col-sm-4 control-label">PIN Code</label>
 			    <div class="col-sm-3">
-			      	<input type="number" min="1" max="9999999"class="form-control" id="pin" value="796001" name="pin" placeholder="Enter PIN" required title="PIN No Required">
+			      	<input type="number" min="1" max="9999999"class="form-control" id="pin" value="796001" name="pin" placeholder="Enter PIN">
 			    </div>
 			</div>
 			@endif
@@ -168,7 +168,7 @@
 			<div class="form-group">
 			    <label for="pstreet" class="col-sm-4 control-label">Present Street</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="pstreet" name="pstreet" placeholder="Enter Present Street" required title="Present Street Required">
+			      	<input type="text" class="form-control" id="pstreet" name="pstreet" placeholder="Enter Present Street">
 			    </div>
 			</div>
 			@endif
@@ -177,7 +177,7 @@
 			<div class="form-group">
 			    <label for="ptown" class="col-sm-4 control-label">Present Town</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="ptown" name="ptown" placeholder="Enter Present Town" required title="Present Town Required">
+			      	<input type="text" class="form-control" id="ptown" name="ptown" placeholder="Enter Present Town">
 			    </div>
 			</div>
 			@endif
@@ -186,7 +186,7 @@
 			<div class="form-group">
 			    <label for="pdistrict" class="col-sm-4 control-label">Present District</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="pdistrict" name="pdistrict" placeholder="Enter Present District" required title="Present District Required">
+			      	<input type="text" class="form-control" id="pdistrict" name="pdistrict" placeholder="Enter Present District">
 			    </div>
 			</div>
 			@endif
@@ -195,7 +195,7 @@
 			<div class="form-group">
 			    <label for="pstate" class="col-sm-4 control-label">Present State</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="pstate" name="pstate" placeholder="Enter Present State" required title="Present State Required">
+			      	<input type="text" class="form-control" id="pstate" name="pstate" placeholder="Enter Present State">
 			    </div>
 			</div>
 			@endif
@@ -204,7 +204,7 @@
 			<div class="form-group">
 			    <label for="ppin" class="col-sm-4 control-label">Present PIN Code</label>
 			    <div class="col-sm-4">
-			      	<input type="number" min="1" max="9999999" class="form-control" id="ppin" name="ppin" value="796001" placeholder="Enter Present PIN" required title="Present PIN No Required">
+			      	<input type="number" min="1" max="9999999" class="form-control" id="ppin" name="ppin" value="796001" placeholder="Enter Present PIN">
 			    </div>
 			</div>
 			@endif
@@ -213,7 +213,7 @@
 			<div class="form-group">
 			    <label for="guardian_name" class="col-sm-4 control-label">Guardian Name</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="guardian_name" name="guardian_name" placeholder="Enter Guardian Name" required title="Guardian Name Required">
+			      	<input type="text" class="form-control" id="guardian_name" name="guardian_name" placeholder="Enter Guardian Name">
 			    </div>
 			</div>
 			@endif
@@ -222,7 +222,7 @@
 			<div class="form-group">
 			    <label for="guardian_address" class="col-sm-4 control-label">Guardian Address</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="guardian_address" name="guardian_address" placeholder="Enter Guardian Address" required title="Guardian Address Required">
+			      	<input type="text" class="form-control" id="guardian_address" name="guardian_address" placeholder="Enter Guardian Address">
 			    </div>
 			</div>
 			@endif
@@ -231,7 +231,7 @@
 			<div class="form-group">
 			    <label for="yoa" class="col-sm-4 control-label">Year of Admission</label>
 			    <div class="col-sm-2">
-			      	<input type="number" min="1" max="9999" class="form-control" id="yoa" name="yoa" placeholder="YYYY" required title="Year of Admission Required">
+			      	<input type="number" min="1" max="9999" class="form-control" id="yoa" name="yoa" placeholder="YYYY">
 			    </div>
 			</div>
 			@endif
@@ -240,7 +240,7 @@
 			<div class="form-group">
 			    <label for="batch" class="col-sm-4 control-label">Batch</label>
 			    <div class="col-sm-4">
-			      	<input type="number" min="1" max="10000" class="form-control" id="batch" name="batch" placeholder="Enter Batch No" required title="Batch No Required">
+			      	<input type="number" min="1" max="10000" class="form-control" id="batch" name="batch" placeholder="Enter Batch No">
 			    </div>
 			</div>
 			@endif
@@ -250,7 +250,7 @@
 			<div class="form-group">
 			    <label for="ten_board" class="col-sm-4 control-label">Class 10 Board</label>
 			    <div class="col-sm-3">
-			      	<input type="text"  class="form-control" id="ten_board" name="ten_board" placeholder="Enter Class 10 Board" required title="Class 10 Board Required">
+			      	<input type="text"  class="form-control" id="ten_board" name="ten_board" placeholder="Enter Class 10 Board">
 			    </div>
 			</div>
 			@endif
@@ -260,7 +260,7 @@
 			<div class="form-group">
 			    <label for="ten_year" class="col-sm-4 control-label">Class 10 Year of Passing</label>
 			    <div class="col-sm-2">
-			      	<input type="number"  class="form-control" id="ten_year" name="ten_year" placeholder="YYYY" required title="Class 10 Year of Passing Required">
+			      	<input type="number"  class="form-control" id="ten_year" name="ten_year" placeholder="YYYY">
 			    </div>
 			</div>
 			@endif
@@ -270,7 +270,7 @@
 			<div class="form-group">
 			    <label for="ten_degree" class="col-sm-4 control-label">Class 10 Degree</label>
 			    <div class="col-sm-4">
-			      	<input type="text"  class="form-control" id="ten_degree" name="ten_degree" placeholder="Enter Class 10 Degree" required title="Class 10 Degree Required">
+			      	<input type="text"  class="form-control" id="ten_degree" name="ten_degree" placeholder="Enter Class 10 Degree">
 			    </div>
 			</div>
 			@endif
@@ -279,7 +279,7 @@
 			<div class="form-group">
 			    <label for="ten_division" class="col-sm-4 control-label">Class 10 Division</label>
 			    <div class="col-sm-4">
-			      	<input type="text"  class="form-control" id="ten_division" name="ten_division" placeholder="Enter Class 10 Division" required title="Class 10 Division Required">
+			      	<input type="text"  class="form-control" id="ten_division" name="ten_division" placeholder="Enter Class 10 Division">
 			    </div>
 			</div>
 			@endif
@@ -288,7 +288,7 @@
 			<div class="form-group">
 			    <label for="twelve_board" class="col-sm-4 control-label">Class 12 Board</label>
 			    <div class="col-sm-4">
-			      	<input type="text"  class="form-control" id="twelve_board" name="twelve_board" placeholder="Enter Class 12 Board" required title="Class 12 Board Required">
+			      	<input type="text"  class="form-control" id="twelve_board" name="twelve_board" placeholder="Enter Class 12 Board">
 			    </div>
 			</div>
 			@endif
@@ -298,7 +298,7 @@
 			<div class="form-group">
 			    <label for="twelve_year" class="col-sm-4 control-label">Class 12 Year of Passing</label>
 			    <div class="col-sm-2">
-			      	<input type="number"  class="form-control" id="twelve_year" name="twelve_year" placeholder="YYYY" required title="Class 12 Year of Passing Required">
+			      	<input type="number"  class="form-control" id="twelve_year" name="twelve_year" placeholder="YYYY">
 			    </div>
 			</div>
 			@endif
@@ -308,7 +308,7 @@
 			<div class="form-group">
 			    <label for="twelve_degree" class="col-sm-4 control-label">Class 12 Degree</label>
 			    <div class="col-sm-4">
-			      	<input type="text"  class="form-control" id="twelve_degree" name="twelve_degree" placeholder="Enter Class 12 Degree" required title="Class 12 Degree Required">
+			      	<input type="text"  class="form-control" id="twelve_degree" name="twelve_degree" placeholder="Enter Class 12 Degree">
 			    </div>
 			</div>
 			@endif
@@ -317,7 +317,7 @@
 			<div class="form-group">
 			    <label for="twelve_division" class="col-sm-4 control-label">Class 12 Division</label>
 			    <div class="col-sm-4">
-			      	<input type="text"  class="form-control" id="twelve_division" name="twelve_division" placeholder="Enter Class 12 Division" required title="Class 12 Division Required">
+			      	<input type="text"  class="form-control" id="twelve_division" name="twelve_division" placeholder="Enter Class 12 Division">
 			    </div>
 			</div>
 			@endif
@@ -327,7 +327,7 @@
 			<div class="form-group">
 			    <label for="degree_board" class="col-sm-4 control-label">Degree Board/University</label>
 			    <div class="col-sm-4">
-			      	<input type="text"  class="form-control" id="degree_board" name="degree_board" placeholder="Enter Degree Board/University" required title="Degree Board/University Required">
+			      	<input type="text"  class="form-control" id="degree_board" name="degree_board" placeholder="Enter Degree Board/University">
 			    </div>
 			</div>
 			@endif
@@ -337,7 +337,7 @@
 			<div class="form-group">
 			    <label for="degree_year" class="col-sm-4 control-label">Degree Year of Passing</label>
 			    <div class="col-sm-2">
-			      	<input type="number"  class="form-control" id="degree_year" name="degree_year" placeholder="YYYY" required title="Degree Year of Passing Required">
+			      	<input type="number"  class="form-control" id="degree_year" name="degree_year" placeholder="YYYY">
 			    </div>
 			</div>
 			@endif
@@ -347,7 +347,7 @@
 			<div class="form-group">
 			    <label for="degree_degree" class="col-sm-4 control-label">Degree</label>
 			    <div class="col-sm-4">
-			      	<input type="text"  class="form-control" id="degree_degree" name="degree_degree" placeholder="Enter Degree" required title="Degree Required">
+			      	<input type="text"  class="form-control" id="degree_degree" name="degree_degree" placeholder="Enter Degree">
 			    </div>
 			</div>
 			@endif
@@ -356,7 +356,7 @@
 			<div class="form-group">
 			    <label for="degree_division" class="col-sm-4 control-label">Degree Division</label>
 			    <div class="col-sm-4">
-			      	<input type="text"  class="form-control" id="degree_division" name="degree_division" placeholder="Enter Degree Division" required title="Degree Division Required">
+			      	<input type="text"  class="form-control" id="degree_division" name="degree_division" placeholder="Enter Degree Division">
 			    </div>
 			</div>
 			@endif
@@ -368,7 +368,7 @@
 			    <label for="job_id" class="col-sm-4 control-label">Designation</label>
 			    <div class="col-sm-4">
 			      	<?php $designations = Designations::all(); ?>
-			    	<select class="form-control" id="job_id" name="job_id" required>
+			    	<select class="form-control" id="job_id" name="job_id">
 			    		<option selected="selected" value="">---Select Designation---</option>
 			    		@foreach($designations as $designation)
 			    			<option value="{{$designation->id}}">{{$designation->designation}}</option>
@@ -382,7 +382,7 @@
 			<div class="form-group">
 			    <label for="jobs_place" class="col-sm-4 control-label">Job Place</label>
 			    <div class="col-sm-8">
-			      	<input type="text"  class="form-control" id="jobs_place" name="jobs_place" placeholder="Enter Job Place" required title="Job Place Required">
+			      	<input type="text"  class="form-control" id="jobs_place" name="jobs_place" placeholder="Enter Job Place">
 			    </div>
 			</div>
 			@endif
@@ -391,7 +391,7 @@
 			<div class="form-group">
 			    <label for="jobs_field" class="col-sm-4 control-label">Field Name</label>
 			    <div class="col-sm-8">
-			      	<input type="text"  class="form-control" id="jobs_field" name="jobs_field" placeholder="Enter Field Name" required title="Field Name Required">
+			      	<input type="text"  class="form-control" id="jobs_field" name="jobs_field" placeholder="Enter Field Name">
 			    </div>
 			</div>
 			@endif
@@ -400,7 +400,7 @@
 			<div class="form-group">
 			    <label for="yoj" class="col-sm-4 control-label">Year of joining</label>
 			    <div class="col-sm-3">
-			      	<input type="number"  class="form-control" id="yoj" name="yoj" placeholder="Enter Year of Joining" required title="Year of joining Required">
+			      	<input type="number"  class="form-control" id="yoj" name="yoj" placeholder="Enter Year of Joining">
 			    </div>
 			</div>
 			@endif
@@ -409,7 +409,7 @@
 			<div class="form-group">
 			    <label for="status" class="col-sm-4 control-label">Status</label>
 			    <div class="col-sm-3">
-			    	<select class="form-control" name="status" required title="Status Required">
+			    	<select class="form-control" name="status">
 			    		<option selected="selected" value="">---Status---</option>
 			    		<option value="Ongoing">Ongoing</option>
 			    		<option value="Completed">Completed</option>
@@ -425,7 +425,7 @@
 			<div class="form-group">
 			    <label for="remarks" class="col-sm-4 control-label">Remarks</label>
 			    <div class="col-sm-8">
-			      	<input type="text"  class="form-control" id="remarks" name="remarks" placeholder="Enter Remarks" required title="Remarks Required">
+			      	<input type="text"  class="form-control" id="remarks" name="remarks" placeholder="Enter Remarks">
 			    </div>
 			</div>
 			@endif

@@ -31,7 +31,7 @@
 			<div class="form-group">
 			    <label for="shortname" class="col-sm-2 control-label">Short Name</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" id="shortname" name="shortname" placeholder="Enter Course Short name" required title="Course short name Required">
+			      	<input type="text" class="form-control" id="shortname" name="shortname" placeholder="Enter Course Short name">
 			    </div>
 			</div>
 
