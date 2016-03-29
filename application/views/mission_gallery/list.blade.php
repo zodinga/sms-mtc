@@ -19,6 +19,7 @@
 
     <div class="col-md-12">
         <h3>Mission Gallery Items</h3>
+        <h4>Total: {{Missiongalleries::count()}}</h4>
         <hr>
         <table class="table table-hover">
         	<thead>

@@ -40,6 +40,16 @@
                     </div>
                 </div>
             </div>
+            <div class="item">
+                <img class="fourth-slide" src="image/pics3.jpg" alt="Fourth slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Praise and Worship</h1>
+                        <p>&nbsp;</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Praise and Worship</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

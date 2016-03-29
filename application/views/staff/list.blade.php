@@ -18,7 +18,7 @@
 	@endif
 
     <div class="col-md-12">
-        <h3>Existing Staffs</h3>
+        <h3>Existing Staffs: </h3><h4>Total: {{Staffs::count()}}</h4>
         <hr>
         <table class="table table-hover">
         	<thead>
