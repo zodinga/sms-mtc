@@ -77,37 +77,33 @@ class Mission_Gallery_Controller extends Base_Controller {
 			->with('gallery',$gallery);
 
 	}
-	public function action_staffUpdate()
+	public function action_itemUpdate()
 	{
 		$id = Input::get('id');
-		$staff = Staffs::find($id);
-		$staff->name = Input::get('name');
-		$staff->fname = Input::get('fname');
-		$staff->contact_no = Input::get('contact_no');
-		$staff->desig = Input::get('desig');
-		$staff->date_of_joining = Input::get('date_of_joining');
-		$staff->dob = Input::get('dob');
-		$staff->gender = Input::get('gender');
-		$staff->address = Input::get('address');
-		$staff->qualification = Input::get('qualification');
-		$staff->remarks = Input::get('remarks');
-		$staff->save();
-		return Redirect::to('staff')
+		$gallery = MissionGalleries::find($id);
+		$gallery->item_name = Input::get('item_name');
+		$gallery->description = Input::get('description');
+		$gallery->quantity = Input::get('quantity');
+		$gallery->source = Input::get('source');
+		$gallery->date_of_registration = Input::get('date_of_registration');
+		$gallery->remarks = Input::get('remarks');
+		$gallery->save();
+		return Redirect::to('mission_gallery')
 			->with('conf',5);
 	}
-	public function action_staffDelete($id)
+	public function action_itemDelete($id)
 	{
 		if(Auth::guest())return Redirect::to('home')->with('conf',3);
-		$staff = Staffs::find($id);
-		if($staff)
+		$gallery = MissionGalleries::find($id);
+		if($gallery)
 		{
-			$staff->delete();
-			return Redirect::to('staff')
+			$gallery->delete();
+			return Redirect::to('mission_gallery')
 				->with('conf',1);
 		}
 		else
 		{
-			return Redirect::to('staff')
+			return Redirect::to('mission_gallery')
 				->with('conf',2);
 
 		}
