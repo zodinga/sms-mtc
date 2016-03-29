@@ -25,7 +25,7 @@
         		<tr>
         			<td><strong>#</strong></td>
         			<td><strong>Name</strong></td>
-        			<td><strong>Fatehers Name</strong></td>
+        			<td><strong>Fathers Name</strong></td>
         			<td><strong>Contact</strong></td>
         			<td><strong>Designation</strong></td>
         			<td><strong>Date of Joining</strong></td>

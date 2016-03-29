@@ -107,6 +107,24 @@
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Mission Gallery <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/mission_gallery/itemCreate"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> New Item</a></li>
+                                <li><a href="/mission_gallery/itemExisting"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Existing Items</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Book Purchased/Received<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> New Book</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Existing Books</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
                     </ul>
                     <!--
                     <form class="navbar-form navbar-left">
