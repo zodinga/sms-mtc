@@ -189,7 +189,7 @@ class Mission_Gallery_Controller extends Base_Controller {
 
         $extension = File::extension($input['photo1']['name']);
           
-        $directory = path('public').'/m_gallery/';
+        $directory = path('public').'/image/mission/';
         $filename = "gallery".$photo_id.".{$extension}";
 
         $upload_success = Input::upload('photo1', $directory, $filename);

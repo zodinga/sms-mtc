@@ -21,15 +21,21 @@
         <h3>New Staff</h3>
         <hr>
         <form class="form-horizontal" action="/staff/staffSave" method="POST">
-        	<!--
+        	
         	<div class="form-group">
 			    <label for="photo" class="col-sm-3 control-label">Photo</label>
-			    <div class="col-sm-6">
-			      	<input type="file" class="file" id="photo" name="photo">
-			      	
+			    <div class="col-sm-8">
+					<script>
+						function img_pathUrl(input){
+						   $('#img')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
+						}
+					</script>
+					<img src="img_url" onerror="this.src='/image/default.png';"id="img" alt="Upload your image" width="10%" height="10%" class="img-rounded" style="border:1px solid black">
+			      	<input type="file" class="form-control" id="photo1" name="photo1" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
+
 			    </div>
 			</div>
-			-->
+
 			<div class="form-group">
 			    <label for="name" class="col-sm-3 control-label">Name</label>
 			    <div class="col-sm-8">
