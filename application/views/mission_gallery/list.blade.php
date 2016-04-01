@@ -60,7 +60,7 @@
         		<tr>
                     <td>{{$gallery->id}}</td>
                      <?php 
-                    $pic="/m_gallery/".$gallery->photo;
+                    $pic="/image/mission/".$gallery->photo;
                     if($gallery->photo=="")
                       $pic="/image/default1.gif";
                     ?>

@@ -20,7 +20,7 @@
 
         <h3>New Staff</h3>
         <hr>
-        <form class="form-horizontal" action="/staff/staffSave" method="POST">
+        <form class="form-horizontal" action="/staff/staffSave" method="POST" enctype="multipart/form-data">
         	
         	<div class="form-group">
 			    <label for="photo" class="col-sm-3 control-label">Photo</label>

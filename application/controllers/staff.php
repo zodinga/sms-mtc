@@ -15,6 +15,7 @@ class Staff_Controller extends Base_Controller {
 		}
 		$staff = Staffs::all();
 		$designations = Designations::all();
+		//dd($conf);
 		return View::make('staff.create')
 			->with('staff',$staff)
 			->with('designations',$designations)
@@ -58,6 +59,9 @@ class Staff_Controller extends Base_Controller {
 		$staff->address = Input::get('address');
 		$staff->qualification = Input::get('qualification');
 		$staff->remarks = Input::get('remarks');
+		$staff->save();
+		$filename=$this->uploads($staff->id);
+		$staff->photo=$filename;
 		$staff->save();
 		return Redirect::to('staff')
 			->with('conf',4);
@@ -103,6 +107,9 @@ class Staff_Controller extends Base_Controller {
 		$staff->qualification = Input::get('qualification');
 		$staff->remarks = Input::get('remarks');
 		$staff->save();
+		$filename=$this->uploads($staff->id);
+		$staff->photo=$filename;
+		$staff->save();
 		return Redirect::to('staff')
 			->with('conf',5);
 	}
@@ -143,5 +150,34 @@ class Staff_Controller extends Base_Controller {
 			->with('staffs',$staffs)
 			->with('courses',$courses);
 	}
+
+	public function uploads($staff_id)
+    {
+       $input = Input::all();
+         
+        $rules = array(
+            'photo1' => 'required|image|max:10000', //photo upload must be an image and must not exceed 500kb
+        );
+ 
+        $validation = Validator::make($input, $rules);
+ 
+        if( $validation->fails() ) {
+        	echo "Failed";
+            return Redirect::to('staff')->with('conf',3);
+        }
+
+        $extension = File::extension($input['photo1']['name']);
+        $directory = path('public').'/image/staff/';
+        $filename = "staff".$staff_id.".{$extension}";
+        $upload_success = Input::upload('photo1', $directory, $filename);
+         return $filename;
+        if( $upload_success ) {
+            
+            return $filename;
+        } else {
+            Session::flash('status_error', 'An error occurred while uploading your new Photo - please try again.');
+        }
+        
+    }
 
 }

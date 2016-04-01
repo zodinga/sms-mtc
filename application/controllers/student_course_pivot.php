@@ -113,7 +113,7 @@ class Student_course_pivot_Controller extends Base_Controller {
 			$scp->jobs_place = Input::get($jobs_place);
 			$scp->jobs_field = Input::get($jobs_field);
 			$scp->yoj = Input::get($yoj);
-			$scp->status = Input::get($statuss);
+			$scp->status = Input::get($status);
 			$scp->remarks = Input::get($remarks);
 			$scp->save();
 		}
