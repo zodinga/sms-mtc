@@ -13,7 +13,7 @@
 		<div class="alert alert-warning" role="alert">Save Error: Student Cannot Save...</div>
 	@endif
 	@if($conf == 4)
-		<div class="alert alert-success" role="alert">One Student successfully added...</div>
+		<div class="alert alert-success" role="alert">One Student successfully Added...</div>
 	@endif
 	@if($conf == 5)
 		<div class="alert alert-success" role="alert">One Student successfully Updated...</div>

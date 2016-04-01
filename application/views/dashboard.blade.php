@@ -66,6 +66,7 @@
                                 <li><a href="/designation/designationCreate"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Designation</a></li>
                                 <li><a href="/subject/subjectCreate"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Subject/Paper</a></li>
                                 <li><a href="/student_course_pivot"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Entry Column Selector</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Gallery Photos</a></li>
                             </ul>
                         </li>
 
@@ -120,8 +121,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Book Purchased/Received<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> New Book</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Existing Books</a></li>
+                                <li><a href="/book_purchased_received/bookCreate"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> New Book</a></li>
+                                <li><a href="/book_purchased_received/bookExisting"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Existing Books</a></li>
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>

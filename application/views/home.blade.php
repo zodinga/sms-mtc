@@ -36,7 +36,7 @@
                             <li class="active"><a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                            
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Advanced Search <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     @foreach($courses as $course)
                                     <li><a href="/home/studentExisting/{{$course->id}}"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Student ({{$course->course}})</a></li>

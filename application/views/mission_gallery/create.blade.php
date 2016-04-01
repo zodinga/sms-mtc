@@ -19,8 +19,24 @@
     <div class="col-md-6">
 
         <h3>New Item</h3>
+            
         <hr>
-        <form class="form-horizontal" action="/mission_gallery/itemSave" method="POST">
+        <form class="form-horizontal" action="/mission_gallery/itemSave" method="POST" enctype="multipart/form-data">
+
+        	<div class="form-group">
+			    <label for="photo" class="col-sm-2 control-label">Photo</label>
+			    <div class="col-sm-10">
+					<script>
+						function img_pathUrl(input){
+						   $('#img')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
+						}
+					</script>
+					<img src="img_url" onerror="this.src='/image/default1.png';"id="img" alt="Upload your image" width="10%" height="10%" class="img-rounded" style="border:1px solid black">
+			      	<input type="file" class="form-control" id="photo1" name="photo1" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
+
+			    </div>
+			</div>
+
 			<div class="form-group">
 			    <label for="item_name" class="col-sm-2 control-label">Item Name</label>
 			    <div class="col-sm-10">
@@ -74,7 +90,7 @@
     </div>
 
 	<div class="col-md-6">
-		<h3>Existing Items</h3>
+		<h3>Existing Items : {{MissionGalleries::count()}}</h3>
 		<hr>
 		<table class="table table-hover">
 			<thead>
@@ -103,6 +119,9 @@
 					<td>
 						<button type="button" onclick="location.href='/mission_gallery/itemEdit/{{$gallery->id}}'" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
 						<button type="button"  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal{{$gallery->id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+						
+
+
 						<!-- Modal -->
 						<div class="modal fade" id="myModal{{$gallery->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						  	<div class="modal-dialog" role="document">
@@ -129,4 +148,45 @@
 					
 	</div>
 </div>
+
+
+<!--Upload
+            <div class="btn-group pull-right">
+    			<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#upload_modal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Upload Photo</button>
+			</div>
+					
+						<div class="modal fade" id="upload_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  	<div class="modal-dialog" role="document">
+
+								<div class="modal-content">
+								    <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        		<h3>Upload a new Photo</h3>
+								    </div>
+									<div class="modal-body">
+								        <form method="POST" action="{{ URL::to('mission_gallery/upload') }}" id="upload_modal_form" enctype="multipart/form-data">
+
+								        <script>
+										function img_pathUrl(input){
+										   $('#img_url')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
+										}
+										</script>
+
+										<img src="img_url" id="img_url" alt="your image" width="50%" height="50%">
+
+										    <label for="photo">Photo</label>
+    										<input type="file" placeholder="Choose a photo to upload" name="photo" id="photo" onChange="img_pathUrl(this);"/>
+
+								        </form>
+							      	</div>
+							      	<div class="modal-footer">
+								        <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+							        	<button type="button" onclick="$('#upload_modal_form').submit();" class="btn btn-primary">Upload Photo</button>
+							      	</div>
+						    	</div>
+						    </div>
+						  </div>
+						
+			End Upload-->
+
 @endsection

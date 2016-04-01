@@ -21,10 +21,32 @@
         <h3>Mission Gallery Items</h3>
         <h4>Total: {{Missiongalleries::count()}}</h4>
         <hr>
+         <form class="form-inline" method="POST" action="/mission_gallery/search">
+            <div class="input-group">
+                <input type="text" class="form-control" name="item" placeholder="Enter Item Name">
+            </div>
+            or
+            <div class="input-group">
+                <input type="text"  class="form-control" name="description" placeholder="Enter Description">
+            </div>
+            or  
+            <div class="input-group">
+                <input type="text" class="form-control" name="source" placeholder="Enter Source">
+            </div>
+            or  
+            <div class="input-group">
+                <input type="date" class="form-control" id="date_of_registration" name="date_of_registration" placeholder="Enter Date of Registration">
+            </div>
+                       
+            <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
+            </div>
+        </form>
+        <hr>
         <table class="table table-hover">
         	<thead>
         		<tr>
-        			<td><strong>#</strong></td>
+                    <td><strong>#</strong></td>
+        			<td><strong>Photo</strong></td>
         			<td><strong>Item Name</strong></td>
         			<td><strong>Description</strong></td>
         			<td><strong>Quantity</strong></td>
@@ -36,7 +58,14 @@
         	<tbody>
         		@foreach($galleries as $gallery)
         		<tr>
-        			<td>{{$gallery->id}}</td>
+                    <td>{{$gallery->id}}</td>
+                     <?php 
+                    $pic="/m_gallery/".$gallery->photo;
+                    if($gallery->photo=="")
+                      $pic="/image/default1.gif";
+                    ?>
+                    <td>
+                    <img src="<?php echo $pic;?>" height="40" width="40" alt="student-photo" class="img-rounded"></td>
         			<td>{{$gallery->item_name}}</td>
         			<td>{{$gallery->description ? $gallery->description : '-'}}</td>
         			<td>{{$gallery->quantity ? $gallery->quantity : '-'}}</td>

@@ -2,36 +2,36 @@
 @section('content')
 <div class="row">
 	@if($conf == 1)
-		<div class="alert alert-success" role="alert">Mission Gallery Item successfully deleted...</div>
+		<div class="alert alert-success" role="alert">Book successfully deleted...</div>
 	@endif
 	@if($conf == 2)
-		<div class="alert alert-danger" role="alert">Delete Error: Mission Gallery Item Cannot Delete...</div>
+		<div class="alert alert-danger" role="alert">Delete Error: Book Cannot Delete...</div>
 	@endif
 	@if($conf == 3)
-		<div class="alert alert-warning" role="alert">Save Error: Mission Gallery Item Cannot Save...</div>
+		<div class="alert alert-warning" role="alert">Save Error: Book Cannot Save...</div>
 	@endif
 	@if($conf == 4)
-		<div class="alert alert-success" role="alert">One Mission Gallery Item successfully created...</div>
+		<div class="alert alert-success" role="alert">One Book successfully Added...</div>
 	@endif
 	@if($conf == 5)
-		<div class="alert alert-success" role="alert">One Mission Gallery Item successfully Updated...</div>
+		<div class="alert alert-success" role="alert">One Book successfully Updated...</div>
 	@endif
     <div class="col-md-6">
 
-        <h3>New Item</h3>
+        <h3>New Book</h3>
         <hr>
-        <form class="form-horizontal" action="/mission_gallery/itemSave" method="POST">
+        <form class="form-horizontal" action="/book_purchased_received/bookSave" method="POST">
 			<div class="form-group">
-			    <label for="item_name" class="col-sm-2 control-label">Item Name</label>
+			    <label for="title" class="col-sm-2 control-label">Title</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" id="item_name" name="item_name" placeholder="Enter Item name" required title="Item name Required">
+			      	<input type="text" class="form-control" id="title" name="title" placeholder="Enter Book Title" required title="Book Title Required">
 			    </div>
 			</div>
 
 			<div class="form-group">
-			    <label for="description" class="col-sm-2 control-label">Description</label>
+			    <label for="author_editors" class="col-sm-2 control-label">Author/Editors</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" id="description" name="description" placeholder="Enter Description">
+			      	<input type="text" class="form-control" id="author_editors" name="author_editors" placeholder="Enter Author/Editors">
 			    </div>
 			</div>
 
@@ -43,16 +43,30 @@
 			</div>
 
 			<div class="form-group">
-			    <label for="source" class="col-sm-2 control-label">Source</label>
+			    <label for="price" class="col-sm-2 control-label">Price</label>
 			    <div class="col-sm-10">
-			      	<input type="text" class="form-control" name="source" id="source" placeholder="Enter Source" required title="Source Required">
+			      	<input type="number" step="0.01" class="form-control" name="price" id="price" placeholder="Enter Price">
 			    </div>
 			</div>
 
 			<div class="form-group">
-			    <label for="date_of_registration" class="col-sm-2 control-label">Reg. Date</label>
+			    <label for="purchasing_price" class="col-sm-2 control-label">Purchasing Price</label>
+			    <div class="col-sm-10">
+			      	<input type="number" step="0.01" class="form-control" name="purchasing_price" id="purchasing_price" placeholder="Enter Purchasing Price">
+			    </div>
+			</div>
+
+			<div class="form-group">
+			    <label for="date_of_purchase" class="col-sm-2 control-label">Date of Purchase</label>
 			    <div class="col-sm-4">
-			      	<input type="date" class="form-control" id="date_of_registration" name="date_of_registration" placeholder="Enter Date of Registration">
+			      	<input type="date" class="form-control" id="date_of_purchase" name="date_of_purchase" placeholder="Enter Date of Purchase">
+			    </div>
+			</div>
+
+			<div class="form-group">
+			    <label for="source" class="col-sm-2 control-label">Source</label>
+			    <div class="col-sm-10">
+			      	<input type="text" class="form-control" name="source" id="source" placeholder="Enter source" >
 			    </div>
 			</div>
 
@@ -74,37 +88,41 @@
     </div>
 
 	<div class="col-md-6">
-		<h3>Existing Items</h3>
+		<h3>Existing Books : Total {{BookPurchasedReceiveds::count()}}</h3>
 		<hr>
 		<table class="table table-hover">
 			<thead>
 				<tr>
 					<td>#</td>
-					<td>Item Name</td>
-					<td>Description</td>
+					<td><b>Title</b></td>
+					<td>Author/Editor</td>
 					<td>Qty</td>
-					<td>Source</td>
-					<td>Date of Register</td>
+					<!--<td>Price</td>-->
+					<!--<td>Purchasing Price</td>-->
+					<td>Purchase Dt.</td>
+					<!--<td>Source</td>-->
 					<!--<td>Remarks</td>-->
 					<td>Action</td>
 				</tr>
 			</thead>
 			<tbody>
-				@foreach($galleries as $gallery)
+				@foreach($books as $book)
 				<tr>
-					<td>{{$gallery->id}}</td>
-					<td>{{$gallery->item_name}}</td>
-					<td>{{$gallery->description}}</td>
-					<td>{{$gallery->quantity}}</td>
-					<td>{{$gallery->source}}</td>
-					<?php $date=date_create($gallery->date_of_registration); ?>
+					<td>{{$book->id}}</td>
+					<td>{{$book->title}}</td>
+					<td>{{$book->author_editors}}</td>
+					<td>{{$book->quantity}}</td>
+					<!--<td>{{$book->price}}</td>-->
+					<!--<td>{{$book->purchasing_price}}</td>-->
+					<?php $date=date_create($book->date_of_purchase); ?>
 					<td>{{date_format($date,"d/M/Y")}}</td>
-					<!--<td>{{$gallery->remarks}}</td>-->
+					<!--<td>{{$book->source}}</td>-->
+					<!--<td>{{$book->remarks}}</td>-->
 					<td>
-						<button type="button" onclick="location.href='/mission_gallery/itemEdit/{{$gallery->id}}'" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
-						<button type="button"  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal{{$gallery->id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+						<button type="button" onclick="location.href='/book_purchased_received/bookEdit/{{$book->id}}'" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+						<button type="button"  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal{{$book->id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
 						<!-- Modal -->
-						<div class="modal fade" id="myModal{{$gallery->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal fade" id="myModal{{$book->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						  	<div class="modal-dialog" role="document">
 						    	<div class="modal-content">
 								    <div class="modal-header">
@@ -112,11 +130,11 @@
 								        <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
 								    </div>
 									<div class="modal-body">
-							        Are You Sure to Delete Item ID : {{$gallery->id}}
+							        Are You Sure to Delete Item ID : {{$book->id}}
 							      	</div>
 							      	<div class="modal-footer">
 								        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-								        <button type="button" onclick="location.href='/mission_gallery/itemDelete/<?php echo $gallery->id ? $gallery->id : '-';?>'" class="btn btn-danger">Delete</button>
+								        <button type="button" onclick="location.href='/book_purchased_received/bookDelete/<?php echo $book->id ? $book->id : '-';?>'" class="btn btn-danger">Delete</button>
 							      	</div>
 						    	</div>
 						  	</div>
