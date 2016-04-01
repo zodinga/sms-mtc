@@ -94,6 +94,9 @@ class Mission_Gallery_Controller extends Base_Controller {
 		$gallery->date_of_registration = Input::get('date_of_registration');
 		$gallery->remarks = Input::get('remarks');
 		$gallery->save();
+		$filename=$this->upload($gallery->id);
+		$gallery->photo=$filename;
+		$gallery->save();
 		return Redirect::to('mission_gallery')
 			->with('conf',5);
 	}
@@ -190,10 +193,11 @@ class Mission_Gallery_Controller extends Base_Controller {
         $extension = File::extension($input['photo1']['name']);
           
         $directory = path('public').'/image/mission/';
+
         $filename = "gallery".$photo_id.".{$extension}";
 
         $upload_success = Input::upload('photo1', $directory, $filename);
-         
+         //dd($upload_success);
         if( $upload_success ) {
             
             return $filename;

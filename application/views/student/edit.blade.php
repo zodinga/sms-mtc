@@ -5,7 +5,29 @@
     <div class="col-md-6">
         <h3>Edit Student</h3>
         <hr>
-        <form class="form-horizontal" action="/student/studentUpdate" method="POST">
+        <form class="form-horizontal" action="/student/studentUpdate" method="POST" enctype="multipart/form-data">
+			
+			@if($scp->photo == "on")
+			<div class="form-group">
+			    <label for="photo" class="col-sm-2 control-label">Photo</label>
+			    <div class="col-sm-10">
+					<script>
+						function img_pathUrl(input){
+						   $('#img')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
+						}
+					</script>
+					<?php 
+                        $pic="/image/student/".$student->photo;
+                        if($student->photo=="")
+                            $pic="/image/default.png";
+                    ?>    
+					<img src="img_url" onerror="this.src='{{$pic}}';"id="img" alt="Upload your image" width="10%" height="10%" class="img-rounded" style="border:1px solid black">
+			      	<input type="file" class="form-control" id="photo1" name="photo1" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
+
+			    </div>
+			</div>
+			@endif
+
 			@if($scp->name == "on")
 			<div class="form-group">
 			    <label for="name" class="col-sm-4 control-label">Student Name</label>

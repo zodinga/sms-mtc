@@ -72,6 +72,13 @@
         		@foreach($students->results as $student)
         		<tr>
         			<td>{{$student->id}}</td>
+        			<?php 
+                    $pic="/image/student/".$student->photo;
+                    if($student->photo=="")
+                      $pic="/image/default.gif";
+                    ?>
+                    <td>
+                    <img src="<?php echo $pic;?>" height="40" width="40" alt="student-photo" class="img-rounded"></td>
         			<td>{{$student->name}}</td>
         			<td>{{$student->fname ? $student->fname : '-'}}</td>
         			<td>{{$student->pob ? $student->pob : '-'}}</td>
@@ -115,6 +122,19 @@
 										    <td>COURSE</td>
 										    <td>{{$course->course}}</td>
 										</tr>
+										@if($scp->name == "on")
+										<tr>
+										    <td>Student Photo</td>
+										    <?php 
+						                    $pic="/image/student/".$student->photo;
+						                    if($student->photo=="")
+						                      $pic="/image/default.gif";
+						                    ?>
+						                    <td>
+						                    <img src="<?php echo $pic;?>" height="40" width="40" alt="student-photo" class="img-rounded"></td>
+										</tr>
+										@endif
+
 							        	@if($scp->name == "on")
 										<tr>
 										    <td>Student Name</td>

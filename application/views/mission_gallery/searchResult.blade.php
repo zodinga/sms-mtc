@@ -45,6 +45,7 @@
         	<thead>
         		<tr>
         			<td><strong>#</strong></td>
+                    <td><strong>Photo</strong></td>
         			<td><strong>Item Name</strong></td>
         			<td><strong>Description</strong></td>
         			<td><strong>Quantity</strong></td>
@@ -57,6 +58,13 @@
         		@foreach($galleries as $gallery)
         		<tr>
         			<td>{{$gallery->id}}</td>
+                    <?php 
+                    $pic="/image/mission/".$gallery->photo;
+                    if($gallery->photo=="")
+                      $pic="/image/default1.gif";
+                    ?>
+                    <td>
+                    <img src="<?php echo $pic;?>" height="40" width="40" alt="student-photo" class="img-rounded"></td>
         			<td>{{$gallery->item_name}}</td>
         			<td>{{$gallery->description ? $gallery->description : '-'}}</td>
         			<td>{{$gallery->quantity ? $gallery->quantity : '-'}}</td>

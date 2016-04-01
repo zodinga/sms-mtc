@@ -40,6 +40,13 @@
         		@foreach($staffs as $staff)
         		<tr>
         			<td>{{$staff->id}}</td>
+                    <?php 
+                    $pic="/image/staff/".$staff->photo;
+                    if($staff->photo=="")
+                      $pic="/image/default1.gif";
+                    ?>
+                    <td>
+                    <img src="<?php echo $pic;?>" height="40" width="40" alt="student-photo" class="img-rounded"></td>
         			<td>{{$staff->name}}</td>
         			<td>{{$staff->fname ? $staff->fname : '-'}}</td>
         			<td>{{$staff->contact_no ? $staff->contact_no : '-'}}</td>
