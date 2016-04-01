@@ -174,7 +174,13 @@
 								        <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
 								    </div>
 									<div class="modal-body">
-							        Are You Sure to Delete Course ID : {{$staff->id}}
+							        Are You Sure to Delete : {{$staff->name}}
+							        <?php 
+                        $pic="/image/staff/".$staff->photo;
+                        if($staff->photo=="")
+                            $pic="/image/default.png";
+                    ?>    
+					<img src="img_url" onerror="this.src='{{$pic}}';"id="img" alt="Upload your image" width="10%" height="10%" class="img-rounded" style="border:1px solid black">
 							      	</div>
 							      	<div class="modal-footer">
 								        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>

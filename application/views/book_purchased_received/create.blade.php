@@ -130,7 +130,7 @@
 								        <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
 								    </div>
 									<div class="modal-body">
-							        Are You Sure to Delete Item ID : {{$book->id}}
+							        Are You Sure to Delete : {{$book->title}}
 							      	</div>
 							      	<div class="modal-footer">
 								        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>

@@ -166,7 +166,7 @@
 			<div class="form-group">
 			    <label for="state" class="col-sm-4 control-label">State</label>
 			    <div class="col-sm-8">
-			      	<input type="text" class="form-control" id="state" name="state" value="Mizoram" placeholder="Enter State">
+			      	<input type="text" class="form-control" id="state" name="state" placeholder="Enter State">
 			    </div>
 			</div>
 			@endif
@@ -175,7 +175,7 @@
 			<div class="form-group">
 			    <label for="pin" class="col-sm-4 control-label">PIN Code</label>
 			    <div class="col-sm-3">
-			      	<input type="number" min="1" max="9999999"class="form-control" id="pin" value="796001" name="pin" placeholder="Enter PIN">
+			      	<input type="number" min="1" max="9999999"class="form-control" id="pin" name="pin" placeholder="Enter PIN">
 			    </div>
 			</div>
 			@endif
@@ -220,7 +220,7 @@
 			<div class="form-group">
 			    <label for="ppin" class="col-sm-4 control-label">Present PIN Code</label>
 			    <div class="col-sm-4">
-			      	<input type="number" min="1" max="9999999" class="form-control" id="ppin" name="ppin" value="796001" placeholder="Enter Present PIN">
+			      	<input type="number" min="1" max="9999999" class="form-control" id="ppin" name="ppin" placeholder="Enter Present PIN">
 			    </div>
 			</div>
 			@endif
