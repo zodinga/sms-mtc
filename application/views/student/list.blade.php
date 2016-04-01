@@ -41,10 +41,14 @@
             <div class="input-group">
                 <input type="number" class="form-control" name="batch" placeholder="Enter Batch No">
             </div>
+            or	
+            <div class="input-group">
+                <input type="text" class="form-control" name="internal_registration" placeholder="Enter Internal Regn No">
+            </div>
             
             <div class="input-group">
             	<input type="hidden" name="course_id" value="{{$course_id}}">
-                <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
+                <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
             </div>
         </form>
         <hr>
@@ -79,7 +83,24 @@
         			<td>{{$student->city ? $student->city : '-'}}</td>
         			<td>
         				<button type="button" class="btn btn-success" onclick="location.href='/student/studentEdit/{{$student->id}}'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</button>
-        				<button type="button" class="btn btn-danger" onclick="location.href='/student/studentDelete/{{$student->id}}'"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
+        				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#stud{{$student->id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true" ></span> Delete</button>
+        				<div class="modal fade" id="stud{{$student->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      	<div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <h4 class="modal-title" id="myModalLabel">STUDENT DETAILS : </h4>
+							      	</div>
+							      	<div class="modal-body">
+							      		Are you sure to Delete Student Name : {{$student->name}} 
+							      	</div>
+							      	<div class="modal-footer">
+								        <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true" ></span> Close</button>
+								        <button type="button" class="btn btn-danger" onclick="location.href='/student/studentDelete/{{$student->id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true" ></span> OK</button>
+							      	</div>
+							    </div>
+							</div>
+						</div>
         				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{$student->id}}"><span class="glyphicon glyphicon-list" aria-hidden="true" ></span> View Details</button>
         				<div class="modal fade" id="myModal{{$student->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 							<div class="modal-dialog" role="document">

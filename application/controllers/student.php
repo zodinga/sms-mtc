@@ -61,6 +61,7 @@ class Student_Controller extends Base_Controller {
 	public function action_studentSave()
 	{
 		if(Auth::guest())return Redirect::to('home')->with('conf',3);
+		
 		$student = new students;
 		$course_id = Input::get("course_id");
 		$student->course_id = Input::get("course_id");
@@ -107,6 +108,12 @@ class Student_Controller extends Base_Controller {
 		$student->status = Input::get("status");
 		$student->remarks = Input::get("remarks");
 		$student->save();
+
+		$course = Courses::find(Input::get("course_id"));
+		$internal_registration = $course->short_name."/".Input::get("yoa").'/'.$student->id;
+		$student->internal_registration = $internal_registration;
+		$student->save();
+
 		return Redirect::to('student')
 			->with('conf',4)
 			->with('course_id',$course_id);
@@ -254,6 +261,10 @@ class Student_Controller extends Base_Controller {
 		if(Input::has('batch'))
 		{
 			$student->where('batch','=',Input::get('batch'));
+		}
+		if(Input::has('internal_registration'))
+		{
+			$student->where('internal_registration','=',Input::get('internal_registration'));
 		}
 		$students = $student->get();
 		if(Session::has('conf'))

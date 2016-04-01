@@ -1,7 +1,5 @@
 @layout('home')
-@section('content-1')
-@endsection
-@section('content-2')
+@section('content')
 <div class="row" style="margin-top:70px;">
 	@if($conf == 1)
 		<div class="alert alert-success" role="alert">Student successfully deleted...</div>
