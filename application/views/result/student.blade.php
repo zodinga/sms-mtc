@@ -18,9 +18,7 @@
 	@endif
 
     <div class="col-md-12">
-    	<?php $course = Courses::find($course_id); 
-    		dd($course);
-    	?>
+    	<?php $course = Courses::find($course_id); ?>
         <h3>Search Student for Result Entry : {{$course->course}}</h3>
         <hr>
         <form class="form-inline" method="POST" action="/result/search">

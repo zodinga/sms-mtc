@@ -47,7 +47,6 @@ class Result_Controller extends Base_Controller {
 		$courses = Courses::all();
 		$scp = StudentCoursePivots::where('course_id','=',$id)->first();
 		$students = Students::where('course_id','=',$id)->order_by('yoa','DESC')->paginate('30');
-		//dd($students);
 		return View::make('result.student')
 			->with('conf',$conf)
 			->with('scp',$scp)
@@ -131,7 +130,7 @@ class Result_Controller extends Base_Controller {
 					->with('course_id',$student->course_id);;
 
 		}
-		dd('stop');
+		//dd('stop');
 		$result = new Results;
 		
 		$result->result = Input::get('resultname');
