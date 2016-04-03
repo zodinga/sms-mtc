@@ -10,7 +10,7 @@ class Create_Gallery_Table {
 	public function up()
 	{
 		//
-		Schema::create('Gallery',function($table)
+		Schema::create('galleries',function($table)
                 {
                    $table->increments('id');
                    $table->string('photo');
@@ -27,7 +27,7 @@ class Create_Gallery_Table {
 	public function down()
 	{
 		//
-		Schema::drop('Gallery');
+		Schema::drop('galleries');
 	}
 
 }
