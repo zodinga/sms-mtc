@@ -61,6 +61,7 @@
 				<tr>
 					<td>#</td>
 					<td>Title</td>
+					<td>Photo</td>
 					<td>Action</td>
 				</tr>
 			</thead>
@@ -69,6 +70,19 @@
 				<tr>
 					<td>{{$gallery->id}}</td>
 					<td>{{$gallery->title}}</td>
+					<script>
+						function img_pathUrl(input){
+						   $('#img')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
+						}
+					</script>
+
+					<?php 
+                        $pic="/image/gallery/".$gallery->photo;
+                        if($gallery->photo=="")
+                            $pic="/image/default1.png";
+                    ?>    
+					<td><img src="img_url" onerror="this.src='{{$pic}}';"id="img" alt="Upload your image" width="20%" height="10%" class="img-rounded" style="border:1px solid black">
+					</td>
 					<td>
 						<button type="button" onclick="location.href='/gallery/itemEdit/{{$gallery->id}}'" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
 						<button type="button"  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal{{$gallery->id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
