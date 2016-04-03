@@ -100,6 +100,12 @@
 							      	</div>
 							      	<div class="modal-body">
 							      		Are you sure to Delete Student Name : {{$student->name}} 
+							      		<?php 
+                        $pic="/image/student/".$student->photo;
+                        if($student->photo=="")
+                            $pic="/image/default1.png";
+                    ?>    
+					<img src="img_url" onerror="this.src='{{$pic}}';"id="img" alt="Upload your image" width="10%" height="10%" class="img-rounded" style="border:1px solid black">
 							      	</div>
 							      	<div class="modal-footer">
 								        <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true" ></span> Close</button>

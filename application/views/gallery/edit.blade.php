@@ -16,10 +16,10 @@
 	@if($conf == 5)
 		<div class="alert alert-success" role="alert">One Gallery Item successfully Updated...</div>
 	@endif
-
+	<div class="col-md-6">
         <h3>Edit Item</h3>
         <hr>
-        <form class="form-horizontal" action="/mission_gallery/itemUpdate" method="POST" enctype="multipart/form-data">
+        <form class="form-horizontal" action="/gallery/itemUpdate" method="POST" enctype="multipart/form-data">
 			
 			<div class="form-group">
 			    <label for="photo" class="col-sm-2 control-label">Photo</label>
@@ -29,12 +29,13 @@
 						   $('#img')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
 						}
 					</script>
+
 					<?php 
-                        $pic="/image/mission/".$gallery->photo;
+                        $pic="/image/gallery/".$gallery->photo;
                         if($gallery->photo=="")
                             $pic="/image/default1.png";
                     ?>    
-					<img src="img_url" onerror="this.src='{{$pic}}';"id="img" alt="Upload your image" width="10%" height="10%" class="img-rounded" style="border:1px solid black">
+					<img src="img_url" onerror="this.src='{{$pic}}';"id="img" alt="Upload your image" width="75%" height="75%" class="img-rounded" style="border:1px solid black">
 			      	<input type="file" class="form-control" id="photo1" name="photo1" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
 
 			    </div>
@@ -74,7 +75,7 @@
 					<td>{{$gallery->id}}</td>
 					<td>{{$gallery->title}}</td>
 					<td>
-						<button type="button" onclick="location.href='/mission_gallery/itemEdit/{{$gallery->id}}'" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+						<button type="button" onclick="location.href='/gallery/itemEdit/{{$gallery->id}}'" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
 						<button type="button"  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal{{$gallery->id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
 						<!-- Modal -->
 						<div class="modal fade" id="myModal{{$gallery->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -95,7 +96,7 @@
 							      	</div>
 							      	<div class="modal-footer">
 								        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-								        <button type="button" onclick="location.href='/mission_gallery/itemDelete/<?php echo $gallery->id ? $gallery->id : '-';?>'" class="btn btn-danger">Delete</button>
+								        <button type="button" onclick="location.href='/gallery/itemDelete/<?php echo $gallery->id ? $gallery->id : '-';?>'" class="btn btn-danger">Delete</button>
 							      	</div>
 						    	</div>
 						  	</div>

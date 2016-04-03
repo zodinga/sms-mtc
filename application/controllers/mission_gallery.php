@@ -194,7 +194,7 @@ class Mission_Gallery_Controller extends Base_Controller {
           
         $directory = path('public').'/image/mission/';
 
-        $filename = "gallery".$photo_id.".{$extension}";
+        $filename = "mission_gallery_".$photo_id.".{$extension}";
 
         $upload_success = Input::upload('photo1', $directory, $filename);
          //dd($upload_success);

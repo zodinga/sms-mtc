@@ -18,15 +18,14 @@
     <br>
     <!-- The container for the list of example images -->
     <div id="links">
-        <a href="/image/gallery/g1.jpg" title="g1" data-gallery>
-        <img src="/image/gallery/g1.jpg" alt="g1" height="80.5" width="80.5">
+    <?php
+    $galleries=Galleries::all();
+    ?>
+    @foreach($galleries as $gallery)
+        <a href="/image/gallery/<?php echo $gallery->photo; ?>" title="<?php echo $gallery->title; ?>" data-gallery>
+        <img src="/image/gallery/<?php echo $gallery->photo; ?>" alt="<?php echo $gallery->title; ?>" height="80.5" width="80.5">
         </a>
-        <a href="/image/gallery/g2.jpg" title="g2" data-gallery>
-            <img src="/image/gallery/g2.jpg" alt="g2" height="80.5" width="80.5">
-        </a>
-        <a href="/image/gallery/g3.jpg" title="g3" data-gallery>
-            <img src="/image/gallery/g3.jpg" alt="g3" height="80.5" width="80.5">
-        </a>
+    @endforeach
     </div>
     <hr>
 @endsection

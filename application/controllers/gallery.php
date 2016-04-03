@@ -170,9 +170,9 @@ class Gallery_Controller extends Base_Controller {
 
         $extension = File::extension($input['photo1']['name']);
           
-        $directory = path('public').'/image/mission/';
+        $directory = path('public').'/image/gallery/';
 
-        $filename = "gallery".$photo_id.".{$extension}";
+        $filename = "gallery_".$photo_id.".{$extension}";
 
         $upload_success = Input::upload('photo1', $directory, $filename);
          //dd($upload_success);

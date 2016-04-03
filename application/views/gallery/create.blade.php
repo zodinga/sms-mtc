@@ -31,7 +31,7 @@
 						   $('#img')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
 						}
 					</script>
-					<img src="img_url" onerror="this.src='/image/default1.png';"id="img" alt="Upload your image" width="10%" height="10%" class="img-rounded" style="border:1px solid black">
+					<img src="img_url" onerror="this.src='/image/default1.png';"id="img" alt="Upload your image" width="45%" height="45%" class="img-rounded" style="border:1px solid black">
 			      	<input type="file" class="form-control" id="photo1" name="photo1" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
 
 			    </div>
@@ -54,7 +54,7 @@
     </div>
 
 	<div class="col-md-6">
-		<h3>Existing Items : {{MissionGalleries::count()}}</h3>
+		<h3>Existing Items : {{Galleries::count()}}</h3>
 		<hr>
 		<table class="table table-hover">
 			<thead>
