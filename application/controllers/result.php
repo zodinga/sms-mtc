@@ -215,7 +215,7 @@ class Result_Controller extends Base_Controller {
 		}
 		if(Input::has('internal_registration'))
 		{
-			$student->where('internal_registration','=',Input::get('internal_registration'));
+			$student->where('internal_registration','LIKE','%'.Input::get('internal_registration').'%');
 		}
 		if(Input::has('batch'))
 		{

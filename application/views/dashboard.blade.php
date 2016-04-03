@@ -98,7 +98,7 @@
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
-
+                        <!--
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-export" aria-hidden="true"></span> Report <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -108,7 +108,7 @@
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
-
+                        -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Mission Gallery <span class="caret"></span></a>
                             <ul class="dropdown-menu">

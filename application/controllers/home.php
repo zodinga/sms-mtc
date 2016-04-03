@@ -6,7 +6,11 @@ class Home_Controller extends Base_Controller {
 	public function action_index()
 	{
 
-		return View::make('home.index');
+		$courses = Courses::all();
+		$students = Students::all();
+		return View::make('home.index')
+			->with('courses',$courses)
+			->with('students',$students);
 	}
 
 	public function action_studentExisting($id)
