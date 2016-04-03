@@ -17,6 +17,8 @@ class Create_Students_Table {
                    $table->string('photo')->nullable();
                    $table->string('name',100);
                    $table->string('fname',100)->nullable();
+                   $table->string('internal_registration',255)->nullable();
+                   $table->string('university_registration',255)->nullable();
                    $table->date('dob')->nullable();
                    $table->string('pob',50)->nullable();
                    $table->string('gender',10)->nullable();
