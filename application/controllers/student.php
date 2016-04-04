@@ -215,11 +215,14 @@ class Student_Controller extends Base_Controller {
 		$student->status = Input::get("status");
 		$student->remarks = Input::get("remarks");
 		$student->save();
-
-		$filename=$this->upload($student->id);
-		$student->photo=$filename;
-		$student->save();
 		
+		$input = Input::all();
+		if($input['photo1']['name'])
+		{
+			$filename=$this->upload($student->id);
+			$student->photo=$filename;
+			$student->save();
+		}
 		return Redirect::to('student')
 			->with('conf',5)
 			->with('course_id',$student->course_id);
@@ -308,7 +311,6 @@ class Student_Controller extends Base_Controller {
  
         if( $validation->fails() ) {
         	echo "Failed";
-        	//dd($photo_id);
             return Redirect::to('dashboard')->with_errors($validation);
         }
 
@@ -316,10 +318,9 @@ class Student_Controller extends Base_Controller {
           
         $directory = path('public').'/image/student/';
 
-        $filename = "student_".$photo_id.".{$extension}";
+        $filename = "student_".time()."_".$photo_id.".{$extension}";
 
         $upload_success = Input::upload('photo1', $directory, $filename);
-         //dd($upload_success);
         if( $upload_success ) {
             
             return $filename;

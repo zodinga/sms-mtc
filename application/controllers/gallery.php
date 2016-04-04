@@ -83,9 +83,15 @@ class Gallery_Controller extends Base_Controller {
 		$gallery = Galleries::find($id);
 		$gallery->title = Input::get('title');
 		$gallery->save();
-		$filename=$this->upload($gallery->id);
-		$gallery->photo=$filename;
-		$gallery->save();
+		
+		$input = Input::all();
+		if($input['photo1']['name'])
+		{
+			$filename=$this->upload($gallery->id);
+			$gallery->photo=$filename;
+			$gallery->save();
+		}
+		
 		return Redirect::to('gallery')
 			->with('conf',5);
 	}
@@ -164,7 +170,6 @@ class Gallery_Controller extends Base_Controller {
  
         if( $validation->fails() ) {
         	echo "Failed";
-        	//dd($photo_id);
             return Redirect::to('dashboard')->with_errors($validation);
         }
 
@@ -172,10 +177,9 @@ class Gallery_Controller extends Base_Controller {
           
         $directory = path('public').'/image/gallery/';
 
-        $filename = "gallery_".$photo_id.".{$extension}";
+        $filename = "gallery_".time()."_".$photo_id.".{$extension}";
 
         $upload_success = Input::upload('photo1', $directory, $filename);
-         //dd($upload_success);
         if( $upload_success ) {
             
             return $filename;

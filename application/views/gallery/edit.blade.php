@@ -36,7 +36,7 @@
                             $pic="/image/default1.png";
                     ?>    
 					<img src="img_url" onerror="this.src='{{$pic}}';"id="img" alt="Upload your image" width="75%" height="75%" class="img-rounded" style="border:1px solid black">
-			      	<input type="file" class="form-control" id="photo1" name="photo1" value="{{$pic}}" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
+			      	<input type="file" class="form-control" id="photo1" name="photo1" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
 			      	
 			    </div>
 			</div>

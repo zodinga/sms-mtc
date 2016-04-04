@@ -108,11 +108,14 @@ class Staff_Controller extends Base_Controller {
 		$staff->qualification = Input::get('qualification');
 		$staff->remarks = Input::get('remarks');
 		$staff->save();
-
-		$filename=$this->upload($staff->id);
-		$staff->photo=$filename;
-		$staff->save();
-
+		
+		$input = Input::all();
+		if($input['photo1']['name'])
+		{
+			$filename=$this->upload($staff->id);
+			$staff->photo=$filename;
+			$staff->save();
+		}
 		return Redirect::to('staff')
 			->with('conf',5);
 	}
@@ -166,7 +169,6 @@ class Staff_Controller extends Base_Controller {
  
         if( $validation->fails() ) {
         	echo "Failed";
-        	//dd($photo_id);
             return Redirect::to('dashboard')->with_errors($validation);
         }
 
@@ -174,10 +176,9 @@ class Staff_Controller extends Base_Controller {
           
         $directory = path('public').'/image/staff/';
 
-        $filename = "staff_".$photo_id.".{$extension}";
+        $filename = "staff_".time()."_".$photo_id.".{$extension}";
 
         $upload_success = Input::upload('photo1', $directory, $filename);
-         //dd($upload_success);
         if( $upload_success ) {
             
             return $filename;

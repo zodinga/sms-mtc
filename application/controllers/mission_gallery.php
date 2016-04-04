@@ -85,6 +85,7 @@ class Mission_Gallery_Controller extends Base_Controller {
 	}
 	public function action_itemUpdate()
 	{
+		
 		$id = Input::get('id');
 		$gallery = MissionGalleries::find($id);
 		$gallery->item_name = Input::get('item_name');
@@ -94,9 +95,15 @@ class Mission_Gallery_Controller extends Base_Controller {
 		$gallery->date_of_registration = Input::get('date_of_registration');
 		$gallery->remarks = Input::get('remarks');
 		$gallery->save();
-		$filename=$this->upload($gallery->id);
-		$gallery->photo=$filename;
-		$gallery->save();
+
+		$input = Input::all();
+		
+		if($input['photo1']['name'])
+		{
+			$filename=$this->upload($gallery->id);
+			$gallery->photo=$filename;
+			$gallery->save();
+		}
 		return Redirect::to('mission_gallery')
 			->with('conf',5);
 	}
@@ -186,7 +193,6 @@ class Mission_Gallery_Controller extends Base_Controller {
  
         if( $validation->fails() ) {
         	echo "Failed";
-        	//dd($photo_id);
             return Redirect::to('dashboard')->with_errors($validation);
         }
 
@@ -194,10 +200,9 @@ class Mission_Gallery_Controller extends Base_Controller {
           
         $directory = path('public').'/image/mission/';
 
-        $filename = "mission_gallery_".$photo_id.".{$extension}";
+        $filename = "mission_gallery_".time()."_".$photo_id.".{$extension}";
 
         $upload_success = Input::upload('photo1', $directory, $filename);
-         //dd($upload_success);
         if( $upload_success ) {
             
             return $filename;
