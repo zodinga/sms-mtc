@@ -7,7 +7,7 @@
         <h3> Total no of Student : {{$totStudent}}</h3>
         @foreach($courses as $course)
             <?php $totno = Students::where('course_id','=',$course->id)->count('id') ?>
-            <button class="btn btn-primary" type="button" onclick="location.href='/home/studentExisting/{{$course->id}}'">
+            <button class="btn btn-primary" type="button" onclick="location.href='/student/studentExisting/{{$course->id}}'">
                 {{$course->course}} <span class="badge">{{$totno ? $totno : "0"}}</span>
             </button>
         @endforeach

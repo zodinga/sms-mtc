@@ -13,6 +13,9 @@
         <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../../bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <link href="../../bootstrap/css/dashboard.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../bootstrap/css/blueimp-gallery.min.css">
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap-image-gallery.css">
+        <link rel="stylesheet" href="../../bootstrap/css/demo.css">
         <script src="../../bootstrap/js/ie-emulation-modes-warning.js"></script>
 
        
@@ -153,7 +156,40 @@
         <div class="container-fluid">
             @yield('content')
         </div>
-
+        <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+        <div id="blueimp-gallery" class="blueimp-gallery">
+            <!-- The container for the modal slides -->
+            <div class="slides"></div>
+            <!-- Controls for the borderless lightbox -->
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+            <!-- The modal dialog, which will be used to wrap the lightbox content -->
+            <div class="modal fade">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body next"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                Previous
+                            </button>
+                            <button type="button" class="btn btn-primary next">
+                                Next
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
@@ -164,5 +200,8 @@
         <script src="../../bootstrap/js/holder.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="../../bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="../../bootstrap/js/jquery.blueimp-gallery.min.js"></script>
+        <script src="../../bootstrap/js/bootstrap-image-gallery.js"></script>
+        <script src="../../bootstrap/js/demo.js"></script>
     </body>
 </html>
