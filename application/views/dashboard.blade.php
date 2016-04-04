@@ -63,15 +63,15 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> System Config <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/course/courseCreate"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Course</a></li>
-                                <li><a href="/designation/designationCreate"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Designation</a></li>
-                                <li><a href="/subject/subjectCreate"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Subject/Paper</a></li>
+                                <li><a href="/designation/designationCreate"><span class="glyphicon glyphicon-king" aria-hidden="true"></span> Designation</a></li>
+                                <li><a href="/subject/subjectCreate"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Subject/Paper</a></li>
                                 <li><a href="/student_course_pivot"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Entry Column Selector</a></li>
                                 <li><a href="/gallery/itemCreate"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Gallery</a></li>
                             </ul>
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Student Entry <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Student <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 @foreach($courses as $course)
                                 <li><a href="/student/studentCreate/{{$course->id}}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Student ({{$course->course}})</a></li>
@@ -81,7 +81,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Result Entry <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Result <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 @foreach($courses as $course)
                                 <li><a href="/result/resultStudent/{{$course->id}}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> {{$course->course}}</a></li>
@@ -91,10 +91,10 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Staff Entry <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Staff <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/staff/staffCreate"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Staff</a></li>
-                                <li><a href="/staff/staffExisting"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  Existing Staff</a></li>
+                                <li><a href="/staff/staffExisting"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>  Existing Staff</a></li>
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
@@ -112,8 +112,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Mission Gallery <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/mission_gallery/itemCreate"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> New Item</a></li>
-                                <li><a href="/mission_gallery/itemExisting"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Existing Items</a></li>
+                                <li><a href="/mission_gallery/itemCreate"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Item</a></li>
+                                <li><a href="/mission_gallery/itemExisting"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Existing Items</a></li>
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
@@ -121,8 +121,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Book Purchased/Received<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/book_purchased_received/bookCreate"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> New Book</a></li>
-                                <li><a href="/book_purchased_received/bookExisting"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Existing Books</a></li>
+                                <li><a href="/book_purchased_received/bookCreate"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New Book</a></li>
+                                <li><a href="/book_purchased_received/bookExisting"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Existing Books</a></li>
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
