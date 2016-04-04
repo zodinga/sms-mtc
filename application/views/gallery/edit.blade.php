@@ -36,8 +36,8 @@
                             $pic="/image/default1.png";
                     ?>    
 					<img src="img_url" onerror="this.src='{{$pic}}';"id="img" alt="Upload your image" width="75%" height="75%" class="img-rounded" style="border:1px solid black">
-			      	<input type="file" class="form-control" id="photo1" name="photo1" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
-
+			      	<input type="file" class="form-control" id="photo1" name="photo1" value="{{$pic}}" placeholder="Choose a photo to upload" onChange="img_pathUrl(this);">
+			      	
 			    </div>
 			</div>
 
@@ -52,6 +52,7 @@
 			    <div class="col-sm-offset-2 col-sm-10">
 			    	<input type="hidden" value="{{$gallery->id}}" name="id">
 			      	<button type="submit" class="btn btn-success">Update</button>
+
 			      	<button type="button" onclick="location.href='/dashboard'" class="btn btn-primary">Exit</button>
 			    </div>
 			</div>
@@ -101,6 +102,7 @@
 						    	</div>
 						  	</div>
 						</div>
+						<!--End Modal -->
 					</td>
 				</tr>
 				@endforeach

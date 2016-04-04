@@ -308,7 +308,7 @@ class Student_Controller extends Base_Controller {
  
         if( $validation->fails() ) {
         	echo "Failed";
-        	dd($photo_id);
+        	//dd($photo_id);
             return Redirect::to('dashboard')->with_errors($validation);
         }
 
