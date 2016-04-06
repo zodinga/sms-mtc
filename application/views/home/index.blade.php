@@ -11,13 +11,30 @@
         $totStudent = Students::count('id'); 
     ?>
     <h3> Total no of Student : {{$totStudent}}</h3>
-    @foreach($courses as $course)
-        <?php $totno = Students::where('course_id','=',$course->id)->count('id') ?>
-        <button class="btn btn-primary" type="button" onclick="location.href='/home/studentExisting/{{$course->id}}'">
-            {{$course->course}} <span class="badge">{{$totno ? $totno : "0"}}</span>
-        </button>
-    @endforeach
     
+    <div class="side-body padding-top">
+        <div class="row">
+            @foreach($courses as $course)
+            <?php $totno = Students::where('course_id','=',$course->id)->count('id') ?>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <a href="/home/studentExisting/{{$course->id}}">
+                    <div class="card red summary-inline">
+                        <div class="card-body">
+                            <div class="icon">
+                                <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                            </div>
+                            <div class="content">
+                                <div class="title">{{$totno ? $totno : "0"}}</div>
+                                <div class="sub-title">{{$course->course}}</div>
+                            </div>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
     <hr>
     <form class="form-inline">
         

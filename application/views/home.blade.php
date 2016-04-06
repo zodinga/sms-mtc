@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="../../bootstrap/css/blueimp-gallery.min.css">
 <link rel="stylesheet" href="../../bootstrap/css/bootstrap-image-gallery.css">
 <link rel="stylesheet" href="../../bootstrap/css/demo.css">
+<link rel="stylesheet" href="../../bootstrap/css/flat-blue.css">
+<link rel="stylesheet" href="../../bootstrap/css/style.min.css">
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
